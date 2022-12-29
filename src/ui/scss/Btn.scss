@@ -14,7 +14,7 @@
 }
 
 .btn {
-	--btn-color-light: var(--color-text-20);
+	--btn-color-light: var(--color-text-10);
 	--btn-color      : var(--color-text);
 	--btn-text       : var(--bg3);
 
@@ -31,11 +31,12 @@
 	--size       : 40px;
 	height       : var(--size);
 	padding      : 0 calc(var(--size) / 2);
-	border-radius: var(--radius-small);
+	border-radius: 0;
 
-	font-size  : 14px;
+	font-size  : 12px;
 	font-family: var(--font-base);
-	font-weight: bold;
+	text-transform: uppercase;
+	// font-weight: bold;
 
 	transition: .2s ease;
 
@@ -58,7 +59,7 @@
 	@media (hover) {
 		&:hover {
 			--btn-color      : var(--color-text--dark);
-			--btn-color-light: var(--color-text-40);
+			--btn-color-light: var(--color-text-20);
 		}
 	}
 

@@ -1,0 +1,79 @@
+<div class="dialog-product">
+    <div class="dialog-product-gallery ">
+        <div class="dialog-product-picture swiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="dialog-product-thumbs swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-product-content">
+        <div class="dialog-product-title">
+            Встраиваемы
+            светильник
+            MPX 122
+        </div>
+        <div class="dialog-product-desc">
+            <div class="fade-80 mb-8">Арт.</div>
+            <div class="text--demibold">Характеристики</div>
+            <div class="">
+                Модель: MPX 122 <br>
+                Тип: Встраиваемый <br>
+                Источник света: MR16 (GU-5.3 GU-10) <br>
+                Количество ламп: 2 <br>
+                Материал: Алюминий <br>
+                Ширина: 92 <br>
+                Длина: 175 <br>
+                Высота: 70 <br>
+            </div>
+        </div>
+        <div class="flex flex-align-center mt-8">
+            <div class="text--demibold mr-5">Цвет:</div>
+            <div class="dialog-product-color">
+                <div class="dialog-product-color-item" style="background: #000000;"></div>
+                <div class="dialog-product-color-item" style="background: #FFFFFF;"></div>
+                <div class="dialog-product-color-item" style="background: linear-gradient(90deg, #000 50%,#fff 50%);">
+                </div>
+            </div>
+
+        </div>
+        <button class="dialog-product-btn btn btn--contur">заказать</button>
+    </div>
+</div>
+
+<script>
+    (() => {
+        const thumbs = new Swiper('.dialog-product-thumbs', {
+            slidesPerView: 'auto',
+            spaceBetween: 5
+        })
+        const slider = new Swiper('.dialog-product-picture', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            thumbs: {
+                swiper: thumbs
+            }
+        })
+    })();
+</script>

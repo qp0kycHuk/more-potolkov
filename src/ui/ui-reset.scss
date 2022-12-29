@@ -57,7 +57,7 @@ body *::before {
     border       : none;
     border-radius: 0;
     box-sizing   : border-box;
-    outline: none;
+    outline: none !important;
 }
 
 sup {

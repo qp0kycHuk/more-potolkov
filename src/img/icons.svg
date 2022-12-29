@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+	xml:space="preserve">
 	<defs>
 		<symbol id="email" width="100%" height="100%" viewBox="0 0 22 18">
 			<path fill-rule="evenodd" clip-rule="evenodd" d="M1.37868 1.71193C0.5 2.59061 0.5 4.00482 0.5 6.83325V11.1666C0.5 13.995 0.5 15.4092 1.37868 16.2879C2.25736 17.1666 3.67157 17.1666 6.5 17.1666H15.5C18.3284 17.1666 19.7426 17.1666 20.6213 16.2879C21.5 15.4092 21.5 13.995 21.5 11.1666V6.83325C21.5 4.00483 21.5 2.59061 20.6213 1.71193C19.7426 0.833252 18.3284 0.833252 15.5 0.833252H6.5C3.67157 0.833252 2.25736 0.833252 1.37868 1.71193ZM4.5547 4.66787C4.09517 4.36152 3.4743 4.48569 3.16795 4.94522C2.8616 5.40475 2.98577 6.02562 3.4453 6.33197L9.8906 10.6288C10.5624 11.0767 11.4376 11.0767 12.1094 10.6288L18.5547 6.33197C19.0142 6.02562 19.1384 5.40475 18.8321 4.94522C18.5257 4.48569 17.9048 4.36152 17.4453 4.66787L11 8.96474L4.5547 4.66787Z" fill="currentColor" />
@@ -24,6 +25,9 @@
 		<symbol id="to-right" width="100%" height="100%" viewBox="0 0 8 14">
 			<path d="M5.63663 7.00019L1.15148 2.51504C0.7935 2.15706 0.7935 1.57666 1.15148 1.21868C1.50946 0.8607 2.08986 0.8607 2.44784 1.21868L7.58118 6.35201C7.93916 6.70999 7.93916 7.29039 7.58118 7.64838L2.44784 12.7817C2.08986 13.1397 1.50946 13.1397 1.15148 12.7817C0.7935 12.4237 0.7935 11.8433 1.15148 11.4853L5.63663 7.00019Z" fill="currentColor" />
 		</symbol>
+		<symbol id="to-down" width="100%" height="100%" viewBox="0 0 16 8">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0.197723 0.368774V2.20922L8 7.79873L15.8023 2.20922V0.368774L8 5.95828L0.197723 0.368774Z" fill="currentColor"/>
+		</symbol>
 		<symbol id="to-left" width="100%" height="100%" viewBox="0 0 8 14">
 			<path d="M2.36337 7.00019L6.84852 2.51504C7.2065 2.15706 7.2065 1.57666 6.84852 1.21868C6.49054 0.8607 5.91014 0.8607 5.55216 1.21868L0.418823 6.35201C0.0608425 6.70999 0.0608425 7.29039 0.418823 7.64838L5.55216 12.7817C5.91014 13.1397 6.49054 13.1397 6.84852 12.7817C7.2065 12.4237 7.2065 11.8433 6.84852 11.4853L2.36337 7.00019Z" fill="currentColor" />
 		</symbol>
@@ -32,6 +36,17 @@
 		</symbol>
 		<symbol id="cross" width="100%" height="100%" viewBox="0 0 16 16">
 			<path d="M1 15L15 1M1 1L15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+		</symbol>
+		<symbol id="dots" width="100%" height="100%" viewBox="0 0 24 24">
+			<circle cx="2" cy="2" r="2" fill="currentColor"/>
+			<circle cx="2" cy="12" r="2" fill="currentColor"/>
+			<circle cx="2" cy="22" r="2" fill="currentColor"/>
+			<circle cx="12" cy="2" r="2" fill="currentColor"/>
+			<circle cx="12" cy="12" r="2" fill="currentColor"/>
+			<circle cx="12" cy="22" r="2" fill="currentColor"/>
+			<circle cx="22" cy="2" r="2" fill="currentColor"/>
+			<circle cx="22" cy="12" r="2" fill="currentColor"/>
+			<circle cx="22" cy="22" r="2" fill="currentColor"/>
 		</symbol>
 		<!--  -->
 		<!--  -->

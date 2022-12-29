@@ -3,7 +3,7 @@ $colors: ('none': rgba(0, 0, 0, 0),
     'primary': #b71540,
     'sec': #CE9B44,
     'black': #000000,
-    'text': #333333,
+    'text': #fff,
     'white': #ffffff,
     'blue': #2980b9,
     'red': #c0392b,
@@ -11,7 +11,7 @@ $colors: ('none': rgba(0, 0, 0, 0),
     'yellow': #f39c12);
 
 $container_md: 650px;
-$container_lg: 1024px;
+$container_lg: 1166px;
 
 $sm   : 425.98px;
 $md   : $container_md + 29.98px;
