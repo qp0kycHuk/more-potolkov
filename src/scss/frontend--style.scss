@@ -268,22 +268,39 @@ body {
 }
 
 .mobile {
-	display         : flex;
-	flex-direction  : column;
 	position        : fixed;
 	top             : 0;
 	left            : 0;
 	bottom          : 0;
-	width           : 100%;
-	max-width       : 390px;
-	background-color: #000;
-	transform       : translateX(-390px);
 	transition      : 0.3s ease;
 	z-index         : var(--zi-l5);
+	width           : 100%;
+	height          : 100%;
+	background-color: var(--color-black-50);
+	opacity         : 0;
+	visibility      : hidden;
 
 	&--open {
-		transform: translateX(0);
+		opacity   : 1;
+		visibility: visible;
 	}
+
+
+	&__content {
+		transition      : 0.3s ease 0.3s;
+		display         : flex;
+		flex-direction  : column;
+		width           : 100%;
+		height          : 100%;
+		max-width       : 390px;
+		background-color: #000;
+		transform       : translateX(-390px);
+
+		&--open {
+			transform: translateX(0);
+		}
+	}
+
 
 	&__head {
 		padding: 36px 18px;
