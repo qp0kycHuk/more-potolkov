@@ -1,6 +1,7 @@
 import fancybox from "./fancybox";
 import inputmask from "./inputmask";
 import scrollTo from "./scrollTo";
+import mobile from "./mobile";
 import toggle from 'npm-kit-toggle';
 import ripple from 'npm-kit-ripple';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
@@ -21,6 +22,7 @@ window.addEventListener('load', () => loadHandler())
 function loadHandler() {
 	fancybox.init()
 	scrollTo.init()
+	mobile.init()
 	toggle.init()
 	ripple.init()
 	inputmask.init(document)

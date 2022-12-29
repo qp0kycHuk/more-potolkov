@@ -23,7 +23,7 @@
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">ОСВЕЩЕНИЕ</a>
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">ПРОФИЛИ</a>
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">ПОЛОТНА</a>
-          <a href="javascript:;" class="header-nav-item btn btn--link link-hover">СВЕТИЛЬНИКИ</a>
+          <!-- <a href="javascript:;" class="header-nav-item btn btn--link link-hover">СВЕТИЛЬНИКИ</a>
           <div class="header-nav-wrap">
             <a href="javascript:;" class="header-nav-item btn btn--link">
               ДЕКОР
@@ -40,14 +40,35 @@
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">УМНЫЙ ДОМ</a>
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">решения</a>
           <a href="javascript:;" class="header-nav-item btn btn--link link-hover">дизайнерам</a>
-          <a href="javascript:;" class="header-nav-item btn btn--link link-hover">О НАС</a>
+          <a href="javascript:;" class="header-nav-item btn btn--link link-hover">О НАС</a> -->
         </div>
         <div class="header-dots">
-          <button class="btn btn--link">
+          <button class="btn btn--link -open-mobile-">
             <svg class="icon text-h6">
               <use xlink:href="img/icons.svg#dots" />
             </svg>
           </button>
+        </div>
+      </div>
+
+      <div class="mobile -mobile-">
+        <div class="mobile__head flex flex-align-center flex-justify-between mb-5">
+          <a class="mobile__logo" href="/">
+            <img class="w-100" src="img/logo.svg" alt="">
+          </a>
+          <button class="mobile__close btn btn--link -close-mobile-">
+            <svg class="icon">
+              <use xlink:href="img/icons.svg#cross" />
+            </svg>
+          </button>
+        </div>
+        <div class="mobile__nav flex">
+          <button class="mobile__item btn btn--link mb-5 -mobile-link-" data-scroll="#catalog">ОСВЕЩЕНИЕ</button>
+          <button class="mobile__item btn btn--link mb-5 -mobile-link-"> ПРОФИЛИ</button>
+          <button class="mobile__item btn btn--link -mobile-link-"> ПОЛОТНА</button>
+        </div>
+        <div class="mobile__bottom mt-auto">
+          <a class="mobile__link text-body-1 text--uppercase btn btn--link w-100 p-8" href="">3D ШОУ-РУМ</a>
         </div>
       </div>
 
@@ -88,12 +109,12 @@
               Посмотрите варианты освещения <br> и профилей в нашем шоу-руме
             </div>
           </a>
-          <a href="javascript:;" class="started-news-item link-hover-wrapper">
+          <!-- <a href="javascript:;" class="started-news-item link-hover-wrapper">
             <div class="text-body-0 text--uppercase text--demibold mb-4 link-hover">НАШИ РАБОТЫ</div>
             <div class="text-body-2 lh-1-5">
               Посмотрите сделанные <br> нами объекты
             </div>
-          </a>
+          </a> -->
         </div>
 
         <button class="started-scroll btn btn-icon btn--contur" data-scroll="#catalog">
@@ -129,6 +150,11 @@
           </div>
         </div>
 
+        <div class="catalog-filter mb-5">
+          <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">Новинки</a>
+          <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">По цене</a>
+        </div>
+
         <div class="catalog-grid">
           <% for(let i=0; i < 6; i++){ %>
             <div class="catalog-item card-action" data-fancybox-modal data-src="dialog-product.html" data-type="ajax">
@@ -158,39 +184,39 @@
               <a href="javascript:;" class="footer-soc-item btn btn--link link-hover">Ig</a>
             </div>
             <div class="text-small text--uppercase">
-              <div class="mb-3">тел.: 8 (862 ) 300-01-83</div>
-              <div class="mb-3">г. Сочи, ул. Транспортная, д.28, </div>
-              <div class="mb-3">ТРЦ "Олимп" (3 этаж)</div>
-              <div class="mb-3">e-mail: ms.dambrava@mail.ru</div>
+              <div class="fade-60 mb-6">тел.: 8 (862 ) 300-01-83</div>
+              <div class="fade-60 mb-6">г. Сочи, ул. Транспортная, д.28, </div>
+              <div class="fade-60 mb-6">ТРЦ "Олимп" (3 этаж)</div>
+              <div class="fade-60">e-mail: ms.dambrava@mail.ru</div>
             </div>
           </div>
           <div class="footer-content">
             <div class="grid">
               <div class="grid-col-3">
-                <div class="text-body-2 text--uppercase mb-3">ОСВЕЩЕНИЕ </div>
-                <div class="text-body-2 mb-3">Трековые системы</div>
-                <div class="text-body-2 mb-3">Световые линии</div>
-                <div class="text-body-2 mb-3">Световые ниши</div>
-                <div class="text-body-2 mb-3">Световые окна</div>
+                <div class="text-body-2 text--uppercase mb-6">ОСВЕЩЕНИЕ </div>
+                <div class="fade-60 text-body-2 mb-6">Трековые системы</div>
+                <div class="fade-60 text-body-2 mb-6">Световые линии</div>
+                <div class="fade-60 text-body-2 mb-6">Световые ниши</div>
+                <div class="fade-60 text-body-2 mb-6">Световые окна</div>
               </div>
               <div class="grid-col-3">
-                <div class="text-body-2 text--uppercase mb-3">ПРОФИЛИ
+                <div class="text-body-2 text--uppercase mb-6">ПРОФИЛИ
                 </div>
-                <div class="text-body-2 mb-3">Теневые</div>
-                <div class="text-body-2 mb-3">Парящие</div>
-                <div class="text-body-2 mb-3">Безрамные </div>
-                <div class="text-body-2 mb-3">Уровневые</div>
-                <div class="text-body-2 mb-3">Нишивые</div>
-                <div class="text-body-2 mb-3">Гардины</div>
-                <div class="text-body-2 mb-3">Другие</div>
+                <div class="fade-60 text-body-2 mb-6">Теневые</div>
+                <div class="fade-60 text-body-2 mb-6">Парящие</div>
+                <div class="fade-60 text-body-2 mb-6">Безрамные </div>
+                <div class="fade-60 text-body-2 mb-6">Уровневые</div>
+                <div class="fade-60 text-body-2 mb-6">Нишивые</div>
+                <div class="fade-60 text-body-2 mb-6">Гардины</div>
+                <div class="fade-60 text-body-2 mb-6">Другие</div>
               </div>
               <div class="grid-col-3">
-                <div class="text-body-2 text--uppercase mb-3">ПОЛОТНА </div>
-                <div class="text-body-2 mb-3">ПВХ полотна</div>
-                <div class="text-body-2 mb-3">Тканевые полотона</div>
+                <div class="text-body-2 text--uppercase mb-6">ПОЛОТНА </div>
+                <div class="fade-60 text-body-2 mb-6">ПВХ полотна</div>
+                <div class="fade-60 text-body-2 mb-6">Тканевые полотона</div>
               </div>
               <div class="grid-col-3">
-                <div class="text-body-2 text--uppercase mb-3">СВЕТИЛЬНИКИ </div>
+                <!-- <div class="text-body-2 text--uppercase mb-3">СВЕТИЛЬНИКИ </div>
                 <div class="text-body-2 text--uppercase mb-3">ДЕКОР </div>
                 <div class="text-body-2 text--uppercase mb-3">ЭЛЕКТРО  </div>
                 <div class="text-body-2 text--uppercase mb-3">КАРНИЗЫ </div>
@@ -198,22 +224,27 @@
                 <div class="text-body-2 text--uppercase mb-3">решения </div>
                 <div class="text-body-2 text--uppercase mb-3">ДИЗАЙНерам </div>
                 <div class="text-body-2 text--uppercase mb-3">О НАС </div>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <div class="footer-bottom-links flex mr-10">
-                <a href="" class="text-small link-hover">Правовая информация</a>
-                <a href="" class="text-small link-hover ml-5">Политика обработки персональных данных</a>
-              </div>
+              </div> -->
               <div class="footer-news">
                 <a href="javascript:;" class="footer-news-item btn btn--contur">
                   3D ШОУ-РУМ
                 </a>
-                <a href="javascript:;" class="footer-news-item btn btn--contur">
-                  НАШИ РАБОТЫ
-                </a>
               </div>
             </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="footer-bottom-links flex mr-10">
+              <!-- <a href="" class="text-small link-hover">Правовая информация</a> -->
+              <a href="" class="fade-60 text-small link-hover">Политика обработки персональных данных</a>
+            </div>
+            <!-- <div class="footer-news">
+              <a href="javascript:;" class="footer-news-item btn btn--contur">
+                3D ШОУ-РУМ
+              </a>
+              <a href="javascript:;" class="footer-news-item btn btn--contur">
+                НАШИ РАБОТЫ
+              </a>
+            </div> -->
           </div>
         </footer>
   </div>

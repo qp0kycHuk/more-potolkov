@@ -37,6 +37,10 @@
 		<symbol id="cross" width="100%" height="100%" viewBox="0 0 16 16">
 			<path d="M1 15L15 1M1 1L15 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 		</symbol>
+		<symbol id="close" width="100%" height="100%" viewBox="0 0 29 27">
+			<path d="M29.3128 -0.000244141H26.9349L0.778074 26.1566H3.15597L29.3128 -0.000244141Z" fill="currentColor"/>
+			<path d="M0.380038 -0.000244141H2.75793L28.9148 26.1566H26.5369L0.380038 -0.000244141Z" fill="currentColor"/>
+		</symbol>
 		<symbol id="dots" width="100%" height="100%" viewBox="0 0 24 24">
 			<circle cx="2" cy="2" r="2" fill="currentColor"/>
 			<circle cx="2" cy="12" r="2" fill="currentColor"/>
