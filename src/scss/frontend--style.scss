@@ -819,6 +819,150 @@ body {
 	}
 }
 
+.dialog-submit {
+	background-color: #000;
+	border-radius   : 25px;
+	width           : 360px;
+	padding         : 60px 40px;
+	display         : flex;
+	align-items     : center;
+	justify-content : center;
+	flex-direction  : column;
+
+	&__img {
+		width        : 56px;
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-weight   : 600;
+		font-size     : 35px;
+		text-transform: uppercase;
+		text-align    : center;
+		margin-bottom : 10px;
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		font-size  : 20px;
+		text-align : center;
+	}
+
+	@media(max-width: 360px) {
+		& {
+			width  : 320px;
+			padding: 50px 20px;
+		}
+	}
+}
+
+.dialog-politic {
+	background-color: #000;
+	border-radius   : 25px;
+	padding         : 43px 57px;
+	width           : 990px;
+
+	&__title {
+		font-weight   : 600;
+		font-size     : 35px;
+		text-transform: uppercase;
+		margin-bottom : 35px;
+		position      : relative;
+
+		&:before {
+			content   : '';
+			position  : absolute;
+			left      : -22px;
+			width     : 5px;
+			background: #FECC00;
+			height    : 80%;
+			top       : 10%;
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size  : 16px;
+		line-height: 24px;
+		opacity    : 0.8;
+	}
+
+	@media(max-width: 990px) {
+		& {
+			width  : 425px;
+			padding: 60px 18px;
+		}
+
+		&__title {
+			font-size    : 20px;
+			margin-bottom: 20px;
+			margin-left  : 18px;
+
+			& br {
+				display: none;
+			}
+		}
+
+		&__text {
+			font-size  : 14px;
+			line-height: 20px;
+		}
+	}
+
+	@media(max-width: 425px) {
+		& {
+			width: 320px;
+		}
+
+		&__title {
+			font-size: 16px;
+		}
+	}
+}
+
+.dialog-form {
+	background-color: #000;
+	border-radius   : 25px;
+	width           : 360px;
+	display         : flex;
+	flex-direction  : column;
+	padding         : 43px 50px;
+
+	&__title {
+		font-weight   : 600;
+		font-size     : 35px;
+		text-transform: uppercase;
+		margin-bottom : 35px;
+		position      : relative;
+		margin-left   : 22px;
+
+		&:before {
+			content   : '';
+			position  : absolute;
+			left      : -22px;
+			width     : 5px;
+			background: #FECC00;
+			height    : 80%;
+			top       : 10%;
+		}
+	}
+
+	&__btn {
+		background: #1E1E1E;
+	}
+
+	@media(max-width: 360px) {
+		& {
+			width  : 320px;
+			padding: 50px 18px;
+		}
+
+		&__title {
+			margin-bottom: 20px;
+		}
+	}
+}
+
 .footer {
 	display      : flex;
 	padding      : 72px 56px 48px;
