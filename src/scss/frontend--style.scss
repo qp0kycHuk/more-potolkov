@@ -267,6 +267,54 @@ body {
 	}
 }
 
+.mobile {
+	display         : flex;
+	flex-direction  : column;
+	position        : fixed;
+	top             : 0;
+	left            : 0;
+	bottom          : 0;
+	width           : 100%;
+	max-width       : 390px;
+	background-color: #000;
+	transform       : translateX(-390px);
+	transition      : 0.3s ease;
+	z-index         : var(--zi-l5);
+
+	&--open {
+		transform: translateX(0);
+	}
+
+	&__head {
+		padding: 36px 18px;
+	}
+
+	&__logo {
+		width: 150px;
+	}
+
+	&__close {
+		font-size: 30px;
+	}
+
+	&__nav {
+		flex-direction: column;
+		padding       : 0 50px;
+	}
+
+	&__item {
+		width: max-content;
+	}
+
+	&__bottom {
+		padding: 50px 18px;
+	}
+
+	&__link {
+		border: 1px solid #FFFFFF;
+	}
+}
+
 .started {
 	padding   : 0;
 	background: url("../img/started-bg.jpg") no-repeat center / cover, #000;
@@ -641,8 +689,8 @@ body {
 	width        : 1800px;
 	max-width    : 100%;
 	background   : #000000;
-	border-radius: 25px;
 	display      : flex;
+	border-radius: 25px;
 	padding      : 36px;
 
 	&-gallery {
@@ -704,6 +752,71 @@ body {
 			border       : 3px solid #fff;
 		}
 	}
+
+	@media(max-width: 1800px) {
+		& {
+			width: 1200px;
+		}
+
+		&-gallery {
+			margin-right: 80px;
+			min-height  : 700px;
+		}
+
+		&-thumbs {
+			right : 0;
+			bottom: 50px;
+		}
+
+		&-content {
+			padding-top: 0;
+		}
+	}
+
+	@media(max-width: 1200px) {
+		& {
+			flex-direction: column;
+			width         : 380px;
+			padding       : 40px 18px;
+			border-radius : 0;
+		}
+
+		&-gallery {
+			width        : 100%;
+			min-height   : 450px;
+			margin-right : 0;
+			margin-bottom: 30px;
+		}
+
+		&-thumbs {
+			left  : 0;
+			bottom: 0;
+		}
+
+		&-thumb {
+			width: 86px;
+			left : 0;
+		}
+
+		&-title {
+			font-size  : 24px;
+			margin-left: 18px;
+		}
+
+		&-btn {
+			margin-top: 50px;
+		}
+	}
+
+	@media(max-width: 380px) {
+		& {
+			width: 320px;
+		}
+
+		&-gallery {
+			min-height: 380px;
+		}
+	}
 }
 
 .footer {
@@ -746,7 +859,7 @@ body {
 			&:before {
 				content : '';
 				position: absolute;
-				inset   : -40px;
+				inset   : -20px;
 
 			}
 		}
