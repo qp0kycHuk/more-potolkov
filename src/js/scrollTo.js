@@ -6,9 +6,12 @@ function clickHandler(event) {
         if (!href) return;
         if (href[0] != '#' || href == '#') return;
 
-        event.preventDefault();
 
         var element = document.querySelector(href);
+        if(!element) return
+        
+        event.preventDefault();
+
         const offset = 45;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = element.getBoundingClientRect().top;

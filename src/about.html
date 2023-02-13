@@ -1,0 +1,176 @@
+<%= _.template(require('./html-includes/header.html').default)() %>
+    <%= _.template(require('./html-includes/started.html').default)() %>
+
+        <section class="about section">
+            <div class="about-description">
+                <div class="about-title title">О НАС</div>
+                <div class="about-description__text">
+                    Мы являемся лидирующей компанией <br>
+                    в г. Сочи по установке натяжных потолков <br>
+                    премиум класса.
+                </div>
+                <div class="about-img">
+                    <img src="img/about-img.jpg" alt="">
+                </div>
+            </div>
+
+            <form class="about-qwiz -front-form-">
+                <div class="about-title title">ЗАГОЛОВОК QUIZ-ОПРОСА</div>
+                <div class="about-qwiz-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="about-qwiz-slide swiper-slide">
+                            <div class="about-qwiz-slide-title">Выберите бюджет потолка</div>
+                            <div class="about-qwiz-slide-fields">
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="cost">
+                                    <div class="about-qwiz-slide-field__content card-action waved">
+                                        <div class="text-body-0 text-sm-h1 text--regular">390 – 800</div>
+                                        <div class="text-body-2 text-sm-h6 text--regular">рублей / кв. м</div>
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">эконом</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="cost" checked>
+                                    <div class="about-qwiz-slide-field__content card-action waved">
+                                        <div class="text-body-0 text-sm-h1 text--regular">800 – 2000</div>
+                                        <div class="text-body-2 text-sm-h6 text--regular">рублей / кв. м</div>
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">стандарт</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="cost">
+                                    <div class="about-qwiz-slide-field__content card-action waved">
+                                        <div class="text-body-0 text-sm-h1 text--regular">> 2000</div>
+                                        <div class="text-body-2 text-sm-h6 text--regular">рублей / кв. м</div>
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">премиум</div>
+                                </label>
+
+                            </div>
+                            <div class="about-qwiz-btns">
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-prev btn btn--contur">назад</button>
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-next btn btn--contur">ДАЛЕЕ</button>
+                            </div>
+                        </div>
+                        <div class="about-qwiz-slide swiper-slide">
+                            <div class="about-qwiz-slide-title">Выберете материал потолка</div>
+                            <div class="about-qwiz-slide-fields">
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="material" checked>
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">ПВХ полотно</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="material">
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">не горючее <br class="d-sm-none"> ПВХ полотно</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="material">
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">ткань стандарт</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="material">
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">ткань премиум</div>
+                                </label>
+                            </div>
+                            <div class="about-qwiz-btns">
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-prev btn btn--contur">назад</button>
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-next btn btn--contur">ДАЛЕЕ</button>
+                            </div>
+                        </div>
+                        <div class="about-qwiz-slide swiper-slide">
+                            <div class="about-qwiz-slide-title">Выберете тип освещения</div>
+                            <div class="about-qwiz-slide-fields">
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="light" checked>
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test-2.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">встраиваемые <br class="d-sm-none"> светильники</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="light">
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test-2.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">световые линии, <br class="d-sm-none"> ниши</div>
+                                </label>
+                                <label class="about-qwiz-slide-field swiper-no-swiping">
+                                    <input type="radio" class="about-qwiz-slide-field__input" name="light">
+                                    <div class="about-qwiz-slide-field__content card-action waved image image--box">
+                                        <img src="img/test-2.jpg" alt="">
+                                    </div>
+                                    <div class="text-body-2 text-sm-body-1 text--center mt-4">трековая система освещения</div>
+                                </label>
+
+                            </div>
+                            <div class="about-qwiz-btns">
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-prev btn btn--contur">назад</button>
+                                <button type="button"
+                                    class="about-qwiz-btn about-qwiz-next btn btn--contur">ДАЛЕЕ</button>
+                            </div>
+                        </div>
+                        <div class="about-qwiz-slide swiper-slide">
+                            <div class="about-qwiz-slide-title">Какой-то подзаголовок</div>
+                            <div class="about-qwiz-form">
+                                <div class="form-field">
+                                    <div class="form-input-cover">
+                                        <input class="form-input about-qwiz-form-input" placeholder="Имя" name="name"
+                                            type="text" required />
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-input-cover">
+                                        <input class="form-input about-qwiz-form-input" placeholder="Телефон"
+                                            name="phone" type="tel" required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <label class="form-field form-checkbox about-qwiz-agree">
+                                <input type="checkbox" class="form-input-checkbox" name="agree" required checked>
+                                <div class="form-radio-target"> </div>
+                                <div class="text-body-2 ml-2"> Согласен на обработку данных </div>
+
+                            </label>
+
+                            <div class="about-qwiz-btns">
+                                <button type="submit" class="about-qwiz-submit btn btn--contur">ЗАКАЗАТЬ ЗВОНОК</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <script>
+            new Swiper('.about-qwiz-slider', {
+                touchRatio: 0,
+                watchSlidesProgress: true,
+                navigation: {
+                    prevEl: '.about-qwiz-prev',
+                    nextEl: '.about-qwiz-next',
+                },
+                autoHeight: true
+
+            })
+        </script>
+
+        <%= _.template(require('./html-includes/footer.html').default)() %>
