@@ -1,6 +1,12 @@
+<% var data = {
+
+  title: 'index'
+
+} %>
+
 <%= _.template(require('./html-includes/header.html').default)() %>
     
-    <%= _.template(require('./html-includes/started.html').default)() %>
+    <%= _.template(require('./html-includes/started.html').default)({data}) %>
 
 
     <% for(let i=0; i < 3; i++){ %>
