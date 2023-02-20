@@ -1484,3 +1484,49 @@ body {
 		}
 	}
 }
+
+.projects {
+	padding: 84px 72px;
+
+	&-slider {
+		margin-top: 75px;
+		position  : relative;
+	}
+
+	&-slide {
+		position : relative;
+		// height: 800px;
+	}
+
+	&__pack {
+		position: relative;
+
+		&::after {
+			content    : "";
+			display    : block;
+			padding-top: 200%;
+		}
+
+		& img {
+			position  : absolute;
+			inset     : 0;
+			width     : 100%;
+			height    : 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position        : absolute;
+		inset           : 0;
+		background-color: var(--color-black-40);
+		z-index         : 1;
+	}
+
+	&__name {
+		position : absolute;
+		transform: rotate(-90deg);
+		left     : -10px;
+		bottom   : 70px;
+	}
+}
