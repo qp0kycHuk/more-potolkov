@@ -1,5 +1,11 @@
+<% var data = {
+
+    title: 'about'
+
+} %>
+
 <%= _.template(require('./html-includes/header.html').default)() %>
-    <%= _.template(require('./html-includes/started.html').default)() %>
+    <%= _.template(require('./html-includes/started.html').default)({data}) %>
 
         <section class="about section">
             <div class="about-description">
@@ -9,12 +15,124 @@
                     в г. Сочи по установке натяжных потолков <br>
                     премиум класса.
                 </div>
+                <div class="about-content flex">
+                    <button class="about-btn btn btn--contur">ОБЗОР НАШЕГО ШОУ-РУМА</button>
+                </div>
                 <div class="about-img">
                     <img src="img/about-img.jpg" alt="">
                 </div>
             </div>
 
-            <form class="about-qwiz -front-form-">
+            <form class="quiz">
+                <div class="text-h4 text-md-h1 text--center text--demibold mb-10">ЗАГОЛОВОК QUIZ-ОПРОСА</div>
+                <div class="quiz__content mb-10">
+                    <div class="quiz__items flex flex-wrap flex-justify-between">
+                        <div class="quiz__item">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2">ШАГ 1</span> Выберите бюджет потолка
+                            </div>
+                            <div class="flex flex-column pl-md-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">эконом 390 – 800 р./м.кв.</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">стандарт 800 – 2 000 р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">премиум 2 000+ р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">премиум 5 000+ р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">эксклюзив 10 000+ р./м.кв</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__item">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2">ШАГ 2</span> Выберите материал потолка
+                            </div>
+                            <div class="flex flex-column pl-md-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">ПВХ полотно</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">негорючие ПВХ полотно</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">ткань стандарт</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">ткань премиум</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">звёздное небо</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="quiz__item">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2">ШАГ 3</span> Выберите тип дооснащение
+                            </div>
+                            <div class="flex flex-column pl-md-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">встраиваемые светильники</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">световые линии, ниши</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">трековая система освещения</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">управление Алисой</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">перегородка</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="checkbox">
+                                    <span class="quiz__text text-body-1 fade-60">электро карниз</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__block flex flex-wrap flex-align-center flex-justify-between">
+                    <img class="quiz__img quiz__img--1" src="img/quiz-1.jpg" alt="">
+                    <div class="quiz__info flex flex-align-center flex-justify-between">
+                        <img class="quiz__img quiz__img--2" src="img/quiz-2.jpg" alt=""> 
+                        <div class="quiz__info-block py-10">
+                            <div class="text-body-2 text-md-body-0 lh-1-5 mb-8">
+                                Рамные профильные системы <br>
+                                с демферным креплениями <br>
+                                полотна используются для <br>
+                                создания сложных узлов <br>
+                                и стильных конструкций.
+                            </div>
+                            <button class="btn btn--contur px-8">ЗАКАЗАТЬ</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- <form class="about-qwiz -front-form-">
                 <div class="about-title title">ЗАГОЛОВОК QUIZ-ОПРОСА</div>
                 <div class="about-qwiz-slider swiper">
                     <div class="swiper-wrapper">
@@ -157,10 +275,10 @@
 
                     </div>
                 </div>
-            </form>
+            </form> -->
         </section>
 
-        <script>
+        <!-- <script>
             new Swiper('.about-qwiz-slider', {
                 touchRatio: 0,
                 watchSlidesProgress: true,
@@ -171,6 +289,6 @@
                 autoHeight: true
 
             })
-        </script>
+        </script> -->
 
         <%= _.template(require('./html-includes/footer.html').default)() %>
