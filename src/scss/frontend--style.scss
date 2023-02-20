@@ -1478,12 +1478,6 @@ body {
 		}
 	}
 
-	@media(max-width: 992px) {
-		&__img {
-			height: 170px;
-		}
-	}
-
 	@media(max-width: $md) {
 		& {
 			margin : 0;
@@ -1491,8 +1485,15 @@ body {
 			border : none;
 		}
 
+		&__packs {
+			grid-gap     : 10px;
+			gap          : 10px;
+			margin-bottom: 10px;
+		}
+
 		&__pack {
-			display: none;
+			height: 150px;
+			flex  : 1;
 		}
 	}
 }
