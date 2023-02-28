@@ -1,12 +1,12 @@
-@mixin btnColor($name, $accent:#fff) {
+@mixin btnColor($name, $accent: #fff) {
 	&--#{$name} {
-		--btn-color      : var(--color-#{$name});
+		--btn-color : var(--color-#{$name});
 		--btn-color-light: var(--color-#{$name}-10);
-		--btn-text       : #{$accent};
+		--btn-text : #{$accent};
 
 		@media (hover) {
 			&:hover {
-				--btn-color      : var(--color-#{$name}--dark);
+				--btn-color : var(--color-#{$name}--dark);
 				--btn-color-light: var(--color-#{$name}-20);
 			}
 		}
@@ -15,25 +15,25 @@
 
 .btn {
 	--btn-color-light: var(--color-text-10);
-	--btn-color      : var(--color-text);
-	--btn-text       : var(--bg3);
+	--btn-color: var(--color-text);
+	--btn-text: var(--bg3);
 
-	background : none;
-	border     : none;
-	outline    : none;
+	background: none;
+	border: none;
+	outline: none;
 	user-select: none;
-	position   : relative;
+	position: relative;
 
-	display        : flex;
-	align-items    : center;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 
-	--size       : 40px;
-	height       : var(--size);
-	padding      : 0 calc(var(--size) / 2);
+	--size: 40px;
+	height: var(--size);
+	padding: 0 calc(var(--size) / 2);
 	border-radius: 0;
 
-	font-size  : 12px;
+	font-size: 12px;
 	font-family: var(--font-base);
 	text-transform: uppercase;
 	// font-weight: bold;
@@ -44,10 +44,11 @@
 	// default variant
 	color: var(--btn-color);
 
+	@media (hover) {
+		&:focus:not(:active) {
+			background: var(--btn-color-light);
 
-	&:focus:not(:active) {
-		background: var(--btn-color-light);
-
+		}
 	}
 
 	&:focus {
@@ -58,7 +59,7 @@
 
 	@media (hover) {
 		&:hover {
-			--btn-color      : var(--color-text--dark);
+			--btn-color: var(--color-text--dark);
 			--btn-color-light: var(--color-text-20);
 		}
 	}
@@ -73,12 +74,12 @@
 
 	// size
 	&-large {
-		--size   : 52px;
+		--size: 52px;
 		font-size: 16px;
 	}
 
 	&-small {
-		--size   : 28px;
+		--size: 28px;
 		font-size: 12px;
 	}
 
@@ -93,26 +94,26 @@
 
 
 	&--white {
-		--btn-color      : #fff;
+		--btn-color: #fff;
 		--btn-color-light: rgba(255, 255, 255, 0.6);
-		--btn-text       : var(--color-text);
+		--btn-text: var(--color-text);
 
 		@media (hover) {
 			&:hover {
-				--btn-color      : #fff;
+				--btn-color: #fff;
 				--btn-color-light: rgba(255, 255, 255, 0.7);
 			}
 		}
 	}
 
 	&--gray {
-		--btn-color      : rgba(49, 49, 49, 0.6);
+		--btn-color: rgba(49, 49, 49, 0.6);
 		--btn-color-light: #F5F7FB;
-		--btn-text       : #fff;
+		--btn-text: #fff;
 
 		@media (hover) {
 			&:hover {
-				--btn-color      : rgba(49, 49, 49, 0.6);
+				--btn-color: rgba(49, 49, 49, 0.6);
 				--btn-color-light: #eef0f5;
 			}
 		}
@@ -123,58 +124,64 @@
 
 	&--fill {
 		background: var(--btn-color);
-		color     : var(--btn-text);
-		border    : transparent;
+		color: var(--btn-text);
+		border: transparent;
 
-		&:focus:not(:active) {
-			background: var(--btn-color);
-			box-shadow: 0 0 0 5px var(--btn-color-light);
+		@media (hover) {
+			&:focus:not(:active) {
+				background: var(--btn-color);
+				box-shadow: 0 0 0 5px var(--btn-color-light);
 
+			}
 		}
 	}
 
 	&--light {
 		background: var(--btn-color-light);
-		color     : var(--btn-color);
+		color: var(--btn-color);
 
-		&:focus:not(:active) {
-			box-shadow: 0 0 0 2px var(--btn-color);
-			background: var(--btn-color-light);
+		@media (hover) {
+
+			&:focus:not(:active) {
+				box-shadow: 0 0 0 2px var(--btn-color);
+				background: var(--btn-color-light);
+			}
 		}
 	}
 
 	&--contur {
 		background: transparent;
-		border    : 1px solid var(--btn-color);
-		color     : var(--btn-color);
+		border: 1px solid var(--btn-color);
+		color: var(--btn-color);
 
 		@media(hover) {
 			&:hover {
 				background: var(--btn-color-light);
 			}
-		}
 
-		&:focus:not(:active) {
-			background: var(--btn-color-light);
-			box-shadow: 0 0 0 1px var(--btn-color), 0 0 0 5px var(--btn-color-light);
+			&:focus:not(:active) {
+				background: var(--btn-color-light);
+				box-shadow: 0 0 0 1px var(--btn-color), 0 0 0 5px var(--btn-color-light);
+			}
 		}
 	}
 
 	&--link {
 		padding: 0;
-		width  : auto;
-		height : auto;
+		width: auto;
+		height: auto;
 
 		background: transparent;
-		color     : var(--btn-color);
+		color: var(--btn-color);
 
 		// border-bottom: 1px solid var(--btn-color);
 		border-radius: 0;
 
-
-		&:focus:not(:active) {
-			background: var(--btn-color-light);
-			box-shadow: 0 0 0 5px var(--btn-color-light);
+		@media (hover) {
+			&:focus:not(:active) {
+				background: var(--btn-color-light);
+				box-shadow: 0 0 0 5px var(--btn-color-light);
+			}
 		}
 	}
 
@@ -187,25 +194,26 @@
 				background: var(--bg3);
 				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--btn-color);
 			}
-		}
 
-		&:focus:not(:active) {
-			background: var(--bg3);
-			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--btn-color);
 
+			&:focus:not(:active) {
+				background: var(--bg3);
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--btn-color);
+
+			}
 		}
 	}
 
 	// mod
 
 	&:disabled {
-		opacity       : 0.4;
+		opacity: 0.4;
 		pointer-events: none;
 	}
 
 	&-fab,
 	&-icon {
-		width  : var(--size);
+		width: var(--size);
 		padding: 0;
 	}
 
