@@ -1,144 +1,474 @@
 <% var data={ title: 'about' } %>
 
     <%= _.template(require('./html-includes/header.html').default)() %>
-        <%= _.template(require('./html-includes/started.html').default)({data}) %>
+        <section class="started section">
+            <div class="started-background swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="started-background-img">
+                            <div class="started-background-gradient"></div>
+                            <img src="img/started-test.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="started-background-img">
+                            <img src="img/started-bg.jpg" alt="">
+                        </div>
 
-            <section class="about section">
-                <div class="about-description">
-                    <div class="about-title title">О НАС</div>
-                    <div class="about-description__text">
-                        Мы являемся лидирующей компанией <br>
-                        в г. Сочи по установке натяжных потолков <br>
-                        премиум класса.
                     </div>
-                    <div class="about-content flex">
-                        <button class="about-btn btn btn--contur">транспортная, 28</button>
-                        <button class="about-btn btn btn--contur">весёлая, 77/6</button>
-                        <button class="about-btn btn btn--contur">Гагарина, 82 а</button>
+                    <div class="swiper-slide">
+                        <div class="started-background-img">
+                            <div class="started-background-gradient"></div>
+                            <img src="img/started-test.jpeg" alt="">
+                        </div>
                     </div>
-                    <div class="about-img">
-                        <img src="img/about-img.jpg" alt="">
+                    <div class="swiper-slide">
+                        <div class="started-background-img">
+                            <img src="img/started-bg.jpg" alt="">
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
-                <form class="quiz">
-                    <div class="text-h4 text-md-h1 text--center text--demibold mb-10">ЗАГОЛОВОК QUIZ-ОПРОСА</div>
-                    <div class="quiz__content mb-10">
-                        <div class="quiz__items flex flex-wrap flex-justify-between">
-                            <div class="quiz__item">
-                                <div class="text-body-1 text-md-body-0 text--demibold mb-6">
-                                    <span class="color-sec mr-2">ШАГ 1</span> Выберите бюджет потолка
+            <div class="section-line section-line--1"></div>
+            <div class="section-line section-line--2"></div>
+            <div class="section-line section-line--3"></div>
+
+            <%= _.template(require('./html-includes/started-header.html').default)() %>
+
+                <div class="started-inner">
+                    <div class="container">
+                        <div class="started-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide started-content">
+                                    <div class="started-title">
+                                        Будущее <br>
+                                        здесь и сейчас
+                                    </div>
+                                    <div class="started-subtitle">
+                                        Натяжные потолки нового поколения в Сочи - неповторимость <br>
+                                        и стиль вашего дома
+                                    </div>
+                                    <div class="started-subtitle d-none d-sm-block">
+                                        Современные системы освещения с возможностью голосового <br>
+                                        управления
+                                    </div>
+                                    <div class="mt-auto"></div>
+                                    <div class="started-form">
+                                        <div class="text-small text--uppercase mb-3">закажите выезд специалиста
+                                            бесплатно</div>
+
+                                        <div class="flex">
+                                            <input type="tel" class="started-form-input" placeholder="+ 7 000 00-00-00">
+                                            <button class="started-form-btn btn btn--contur">заказать</button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flex flex-column pl-md-8">
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">эконом 390 – 800 р./м.кв.</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">стандарт 800 – 2 000 р./м.кв</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">премиум 2 000+ р./м.кв</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">премиум 5 000+ р./м.кв</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">эксклюзив 10 000+ р./м.кв</span>
-                                    </label>
+                                <div class="swiper-slide started-content">
+                                    <div class="started-title">
+                                        Вентиляционный <br>
+                                        щелевой диффузор
+                                    </div>
+                                    <div class="started-subtitle">
+                                        Решение позволяет интегрировать вентиляционную систему <br>
+                                        в натяжной или в гипсокартонный потолок
+                                    </div>
+                                    <div class="mt-auto"></div>
+                                    <div class="started-form">
+                                        <button
+                                            class="started-form-btn btn btn--contur w-100 w-sm-auto">подробнее</button>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide started-content">
+                                    <div class="started-title">
+                                        Будущее <br>
+                                        здесь и сейчас
+                                    </div>
+                                    <div class="started-subtitle">
+                                        Натяжные потолки нового поколения в Сочи - неповторимость <br>
+                                        и стиль вашего дома
+                                    </div>
+                                    <div class="started-subtitle d-none d-sm-block">
+                                        Современные системы освещения с возможностью голосового <br>
+                                        управления
+                                    </div>
+                                    <div class="mt-auto"></div>
+                                    <div class="started-form">
+                                        <div class="text-small text--uppercase mb-3">закажите выезд специалиста
+                                            бесплатно</div>
+
+                                        <div class="flex">
+                                            <input type="tel" class="started-form-input" placeholder="+ 7 000 00-00-00">
+                                            <button class="started-form-btn btn btn--contur">заказать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide started-content">
+                                    <div class="started-title">
+                                        Вентиляционный <br>
+                                        щелевой диффузор
+                                    </div>
+                                    <div class="started-subtitle">
+                                        Решение позволяет интегрировать вентиляционную систему <br>
+                                        в натяжной или в гипсокартонный потолок
+                                    </div>
+                                    <div class="mt-auto"></div>
+                                    <div class="started-form">
+                                        <button
+                                            class="started-form-btn btn btn--contur w-100 w-sm-auto">подробнее</button>
+                                    </div>
+
                                 </div>
                             </div>
-                            <div class="quiz__item">
-                                <div class="text-body-1 text-md-body-0 text--demibold mb-6">
-                                    <span class="color-sec mr-2">ШАГ 2</span> Выберите материал потолка
-                                </div>
-                                <div class="flex flex-column pl-md-8">
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">ПВХ полотно</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">негорючие ПВХ полотно</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">ткань стандарт</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">ткань премиум</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">звёздное небо</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="quiz__item">
-                                <div class="text-body-1 text-md-body-0 text--demibold mb-6">
-                                    <span class="color-sec mr-2">ШАГ 3</span> Выберите тип дооснащение
-                                </div>
-                                <div class="flex flex-column pl-md-8">
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">встраиваемые светильники</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">световые линии, ниши</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">трековая система освещения</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">управление Алисой</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">перегородка</span>
-                                    </label>
-                                    <label class="quiz__label flex flex-align-center">
-                                        <input class="quiz__input mr-5" type="checkbox">
-                                        <span class="quiz__text text-body-1 fade-60">электро карниз</span>
-                                    </label>
+                        </div>
+                        <div class="started-slider-control">
+                            <button class="started-slider-btn started-slider-prev btn btn-icon btn--contur btn--white">
+                                <svg class="icon">
+                                    <use xlink:href="/img/icons.svg#to-left" />
+                                </svg>
+                                <svg class="icon">
+                                    <use xlink:href="/img/icons.svg#to-left" />
+                                </svg>
+                            </button>
+                            <button class="started-slider-btn started-slider-next btn btn-icon btn--contur btn--white">
+                                <svg class="icon">
+                                    <use xlink:href="/img/icons.svg#to-right" />
+                                </svg>
+                                <svg class="icon">
+                                    <use xlink:href="/img/icons.svg#to-right" />
+                                </svg>
+                            </button>
+
+                            <div class="started-next-slider ml-5 swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide started-next-slide">
+                                        <div class="fade-40 mb-2">Следующий слайд</div>
+                                        <div>НОВИНКА! Вентиляционный щелевой диффузор</div>
+                                    </div>
+                                    <div class="swiper-slide started-next-slide">
+                                        <div class="fade-40 mb-2">Следующий слайд</div>
+                                        <div>НОВИНКА! Вентиляционный щелевой диффузор</div>
+                                    </div>
+                                    <div class="swiper-slide started-next-slide">
+                                        <div class="fade-40 mb-2">Следующий слайд</div>
+                                        <div>НОВИНКА! Вентиляционный щелевой диффузор</div>
+                                    </div>
+                                    <div class="swiper-slide started-next-slide">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="quiz__block flex flex-align-stretch flex-justify-between">
-                        <div class="quiz__packs flex flex-align-center flex-justify-between w-100">
-                            <div class="quiz__pack quiz__pack--1 w-100">
-                                <img src="img/quiz-1.jpg" alt="">
+
+                    <div class="started-soc">
+                        <a href="javascript:;" class="started-soc-item btn btn--link link-hover">Vk</a>
+                        <a href="javascript:;" class="started-soc-item btn btn--link link-hover">Tg</a>
+                        <a href="javascript:;" class="started-soc-item btn btn--link link-hover">Ig</a>
+                    </div>
+
+                    <div class="started-news started-news--items">
+                        <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
+                            <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-1</div>
+                            <div class="text-body-2 lh-1-5">
+                                Какой-то текст о <br> преимуществах компании
                             </div>
-                            <div class="quiz__pack quiz__pack--2 w-100">
-                                <img src="img/quiz-2.jpg" alt="">
+                        </a>
+                        <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
+                            <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-2</div>
+                            <div class="text-body-2 lh-1-5">
+                                Какой-то текст о <br> преимуществах компании
                             </div>
-                            <!-- <img class="quiz__img mr-3 mr-lg-8" src="img/quiz-1.jpg" alt="">
-                        <img class="quiz__img" src="img/quiz-2.jpg" alt="">  -->
+                        </a>
+                        <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
+                            <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-3</div>
+                            <div class="text-body-2 lh-1-5">
+                                Какой-то текст <br> преимуществах компании
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="started-slider-pagination"></div>
+                <script>
+                    const sliderOptions = {
+                        slidesPerView: 1,
+                        touchRatio: 0,
+                    }
+
+                    const startedSlider = new Swiper('.started-slider', {
+                        ...sliderOptions,
+                        touchRatio: 1,
+                        spaceBetween: 20,
+                        navigation: {
+                            prevEl: '.started-slider-prev',
+                            nextEl: '.started-slider-next',
+                        },
+                        pagination: {
+                            el: '.started-slider-pagination',
+                            clickable: true
+                        },
+                        breakpoints: {
+                            [679.98]: {
+                                touchRatio: 0,
+                            }
+                        }
+                    })
+
+                    const startedBackgroundSlider = new Swiper('.started-background', {
+                        ...sliderOptions,
+                        effect: 'fade'
+                    })
+
+                    const startedNextSlider = new Swiper('.started-next-slider', {
+                        ...sliderOptions,
+                        direction: 'vertical'
+                    })
+
+                    startedSlider.on('slideChange', () => startedBackgroundSlider.slideTo(startedSlider.activeIndex))
+                    startedSlider.on('slideChange', () => startedNextSlider.slideTo(startedSlider.activeIndex))
+                </script>
+
+                <div class="started-hand">
+                    <img src="img/hand.png" alt="" class="started-hand-img">
+                </div>
+        </section>
+
+
+        <section class="about section">
+            <div class="about-description">
+                <div class="about-title title">О НАС</div>
+                <div class="about-description__text">
+                    Мы являемся лидирующей компанией <br>
+                    в г. Сочи по установке натяжных потолков <br>
+                    премиум класса.
+                </div>
+                <div class="text-body-2 mt-md-10">
+                    Сделай правильный выбор в одном из трёх наших шоу-румов. <br>
+                    Мы в Сочи и в Адлере:
+                </div>
+                <div class="about-content flex mt-8">
+                    <button class="about-btn btn btn--contur">транспортная, 28</button>
+                    <button class="about-btn btn btn--contur">весёлая, 77/6</button>
+                    <button class="about-btn btn btn--contur">Гагарина, 82 а</button>
+                </div>
+                <div class="about-img">
+                    <img src="/img/about-img.jpg" alt="">
+                </div>
+            </div>
+
+            <form class="quiz" data-tab-cover data-toggle-cover>
+                <div class="text-subtitle-2 text-sm-h4 text-md-h1 text--center text--demibold mb-10">ЗАГОЛОВОК
+                    QUIZ-ОПРОСА</div>
+                <div class="quiz__content mb-sm-10">
+                    <div class="quiz__items flex flex-wrap flex-justify-between">
+                        <div class="quiz__item" data-tab-content="qwiz-1">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2 d-none d-lg-inline">ШАГ 1</span> Выберите бюджет потолка
+                            </div>
+                            <div class="flex flex-column pl-lg-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio" name="qwiz-1">
+                                    <span class="quiz__text text-body-1 fade-60">эконом 390 – 800 р./м.кв.</span>
+                                    <div class="quiz__label-text d-lg-none">
+                                        Рамные профильные системы с демферным креплениями полотна используются для
+                                        создания сложных узлов и стильных конструкций.
+                                    </div>
+                                    <button type="button" data-tab-link="qwiz-2"
+                                        class="quiz__label-btn btn btn--yellow btn--fill d-lg-none">
+                                        следующий шаг
+                                    </button>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio" name="qwiz-1">
+                                    <span class="quiz__text text-body-1 fade-60">стандарт 800 – 2 000 р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio" name="qwiz-1">
+                                    <span class="quiz__text text-body-1 fade-60">премиум 2 000+ р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio" name="qwiz-1">
+                                    <span class="quiz__text text-body-1 fade-60">премиум 5 000+ р./м.кв</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio" name="qwiz-1">
+                                    <span class="quiz__text text-body-1 fade-60">эксклюзив 10 000+ р./м.кв</span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="quiz__info flex flex-column flex-justify-center py-7">
-                            <div class="text-body-2 text-md-body-0 lh-1-5 mb-8">
-                                Рамные профильные системы
-                                с демферным креплениями
-                                полотна используются для
-                                создания сложных узлов
-                                и стильных конструкций.
+                        <div class="quiz__item" data-tab-content="qwiz-2">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2 d-none d-lg-inline">ШАГ 2</span> Выберите материал потолка
+                            </div>
+                            <div class="flex flex-column pl-lg-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">ПВХ полотно</span>
+                                    <div class="quiz__label-text d-lg-none">
+                                        Рамные профильные системы с демферным креплениями полотна используются для
+                                        создания сложных узлов и стильных конструкций.
+                                    </div>
+                                    <button type="button" data-tab-link="qwiz-3"
+                                        class="quiz__label-btn btn btn--yellow btn--fill d-lg-none">
+                                        следующий шаг
+                                    </button>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">негорючие ПВХ полотно</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">ткань стандарт</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">ткань премиум</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">звёздное небо</span>
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn--contur mt-4 d-lg-none w-100"
+                                data-tab-link="qwiz-1">Назад</button>
+                        </div>
+                        <div class="quiz__item" data-tab-content="qwiz-3">
+                            <div class="text-body-1 text-md-body-0 text--demibold mb-6">
+                                <span class="color-sec mr-2 d-none d-lg-inline">ШАГ 3</span> Выберите тип дооснащение
+                            </div>
+                            <div class="flex flex-column pl-lg-8">
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">встраиваемые светильники</span>
+                                    <div class="quiz__label-text d-lg-none">
+                                        Рамные профильные системы с демферным креплениями полотна используются для
+                                        создания сложных узлов и стильных конструкций.
+                                    </div>
+                                    <button type="button" data-toggle-link
+                                        class="quiz__label-btn btn btn--yellow btn--fill d-lg-none">
+                                        следующий шаг
+                                    </button>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">световые линии, ниши</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">трековая система освещения</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">управление Алисой</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">перегородка</span>
+                                </label>
+                                <label class="quiz__label flex flex-align-center">
+                                    <input class="quiz__input mr-5" type="radio">
+                                    <span class="quiz__text text-body-1 fade-60">электро карниз</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-form" data-toggle-content data-toggle-static>
+                        <div class="mb-6 lh-1-5 text-body-2 text-sm-body-1">
+                            Давайте скорее возьмем проект вашего будущего потолка в работу — для того, чтобы мы получили
+                            заявку, осталось лишь оставить контактные данные.
+                            Проконсультируем вас по любому вопросу, прикинем стоимость и сроки. Если вы хотите
+                            сопроводить заявку чем-то наглядным, можно прикрепить файл.
+                            Также мы отправим вам сертификат на <b>2000 рублей!</b>
+                        </div>
+                        <div class="quiz-form-fields">
+                            <div class="quiz-form-inputs mb-4">
+                                <label class="form-field quiz-form-input">
+                                    <div class="text-body-2 text--demibold mb-2">Ваше имя</div>
+                                    <div class="form-input-cover">
+                                        <input type="text" class="form-input">
+                                    </div>
+                                </label>
+                                <label class="form-field quiz-form-input">
+                                    <div class="text-body-2 text--demibold mb-2">Ваш телефон</div>
+                                    <div class="form-input-cover">
+                                        <input type="tel" class="form-input">
+                                    </div>
+                                </label>
+                                <label class="form-field quiz-form-input">
+                                    <div class="text-body-2 text--demibold mb-2">Ваша почта</div>
+                                    <div class="form-input-cover">
+                                        <input type="email" class="form-input">
+                                    </div>
+                                </label>
+                                <div class="quiz-form-files pt-md-7">
+                                    <label class="quiz-form-file-input fade-60">
+                                        <input type="file" name="attachments" class="d-none">
+                                        <img src="img/paperclip.png" alt="" class="mr-2">
+                                        <div class="text-body-2 text--underline">Прикрепить фото или файл</div>
+                                    </label>
+                                </div>
                             </div>
                             <div class="flex">
-                                <button class="btn btn--contur px-8">ЗАКАЗАТЬ</button>
+                                <div>
+                                    <div class="text-body-2 text--demibold mb-2">Выберите удобный мессенджер</div>
+                                    <div class="quiz-form-messangers">
+                                        <label class="quiz-form-messanger form-field form-checkbox">
+                                            <input type="checkbox" class="form-input-checkbox">
+                                            <div class="form-radio-target"> </div>
+                                            <div class="text-body-2 fade-40 ml-2">Telegram</div>
+                                        </label>
+                                        <label class="quiz-form-messanger form-field form-checkbox">
+                                            <input type="checkbox" class="form-input-checkbox">
+                                            <div class="form-radio-target"> </div>
+                                            <div class="text-body-2 fade-40 ml-2">WhatsApp</div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button class="quiz-form-btn btn btn--contur d-none d-md-flex">Получить подарок</button>
                             </div>
+                            <div class="mt-4 text-body-2 fade-40">
+                                Нажимая на кнопку, вы даёте согласие на <a href="javascript:;"
+                                    class="link-hover text--underline">обработку персональных данных</a>
+                            </div>
+                            <button type="button" data-tab-link="qwiz-2"
+                                class="btn btn--yellow btn--fill d-md-none w-100 mt-6 color-black">
+                                Получить подарок
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="quiz__block flex flex-align-stretch flex-justify-between">
+                    <div class="quiz__packs flex flex-align-center flex-justify-between w-100">
+                        <div class="quiz__pack quiz__pack--1 w-100">
+                            <img src="/img/quiz-1.jpg" alt="">
+                        </div>
+                        <div class="quiz__pack quiz__pack--2 w-100">
+                            <img src="/img/quiz-2.jpg" alt="">
+                        </div>
+                        <!-- <img class="quiz__img mr-3 mr-lg-8" src="/img/quiz-1.jpg" alt="">
+                        <img class="quiz__img" src="/img/quiz-2.jpg" alt="">  -->
+                    </div>
+                    <div class="quiz__info flex flex-column flex-justify-center py-7">
+                        <div class="text-body-2 text-md-body-0 lh-1-5 mb-8">
+                            Рамные профильные системы
+                            с демферным креплениями
+                            полотна используются для
+                            создания сложных узлов
+                            и стильных конструкций.
+                        </div>
+                        <div class="flex">
+                            <button type="button" class="quiz__info-btn btn btn--contur px-8"
+                                data-toggle-link>ЗАКАЗАТЬ</button>
                         </div>
                     </div>
-                </form>
+                </div>
+            </form>
 
-                <!-- <form class="about-qwiz -front-form-">
+            <!-- <form class="about-qwiz -front-form-">
                 <div class="about-title title">ЗАГОЛОВОК QUIZ-ОПРОСА</div>
                 <div class="about-qwiz-slider swiper">
                     <div class="swiper-wrapper">
@@ -184,28 +514,28 @@
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="material" checked>
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="/img/test.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">ПВХ полотно</div>
                                 </label>
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="material">
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="/img/test.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">не горючее <br class="d-sm-none"> ПВХ полотно</div>
                                 </label>
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="material">
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="/img/test.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">ткань стандарт</div>
                                 </label>
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="material">
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test.jpg" alt="">
+                                        <img src="/img/test.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">ткань премиум</div>
                                 </label>
@@ -223,21 +553,21 @@
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="light" checked>
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test-2.jpg" alt="">
+                                        <img src="/img/test-2.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">встраиваемые <br class="d-sm-none"> светильники</div>
                                 </label>
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="light">
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test-2.jpg" alt="">
+                                        <img src="/img/test-2.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">световые линии, <br class="d-sm-none"> ниши</div>
                                 </label>
                                 <label class="about-qwiz-slide-field swiper-no-swiping">
                                     <input type="radio" class="about-qwiz-slide-field__input" name="light">
                                     <div class="about-qwiz-slide-field__content card-action waved image image--box">
-                                        <img src="img/test-2.jpg" alt="">
+                                        <img src="/img/test-2.jpg" alt="">
                                     </div>
                                     <div class="text-body-2 text-sm-body-1 text--center mt-4">трековая система освещения</div>
                                 </label>
@@ -268,7 +598,7 @@
                             </div>
 
                             <label class="form-field form-checkbox about-qwiz-agree">
-                                <input type="checkbox" class="form-input-checkbox" name="agree" required checked>
+                                <input type="radio" class="form-input-checkbox" name="agree" required checked>
                                 <div class="form-radio-target"> </div>
                                 <div class="text-body-2 ml-2"> Согласен на обработку данных </div>
 
@@ -282,144 +612,166 @@
                     </div>
                 </div>
             </form> -->
-            </section>
+        </section>
 
-            <!-- <script>
-            new Swiper('.about-qwiz-slider', {
-                touchRatio: 0,
-                watchSlidesProgress: true,
-                navigation: {
-                    prevEl: '.about-qwiz-prev',
-                    nextEl: '.about-qwiz-next',
-                },
-                autoHeight: true
+        <!-- <script>
+                new Swiper('.about-qwiz-slider', {
+                    touchRatio: 0,
+                    watchSlidesProgress: true,
+                    navigation: {
+                        prevEl: '.about-qwiz-prev',
+                        nextEl: '.about-qwiz-next',
+                    },
+                    autoHeight: true
 
-            })
-        </script> -->
+                })
+            </script> -->
 
-            <section class="projects section bg-black">
-                <div class="projects-slider-wrapper">
+        <section class="projects section bg-black">
+            <div class="projects-slider-wrapper">
 
-                    <div class="d-lg-flex flex-align-center ">
-                        <div class="title">НАШИ ПРОЕКТЫ</div>
-                        <div class="catalog-nav ml-auto">
-                            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover active">ВСЕ</a>
-                            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КВАРТИРЫ</a>
-                            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">ОФИСЫ</a>
-                            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КАФЕ</a>
-                        </div>
-                        <div class="projects-slider-top">
-                            <div class="projects-slider-pagination">
-                                <div class="projects-slider-pagination-num">О1</div>
-                                <div class="projects-slider-pagination-dots">
-                                    <div class="projects-slider-pagination-dot"></div>
-                                    <div class="projects-slider-pagination-dot"></div>
-                                    <div class="projects-slider-pagination-dot"></div>
-                                    <div class="projects-slider-pagination-dot"></div>
-                                </div>
-                                <div class="projects-slider-pagination-num">О4</div>
-                            </div>
-
-                            <button
-                                class="projects-slider-top-arrow projects-slider-top-prev btn btn--white -projects-slider-prev- ml-sm-2">
-                                <svg class="icon">
-                                    <use xlink:href="img/icons.svg#to-left" />
-                                </svg>
-                            </button>
-                            <button class="projects-slider-top-arrow btn btn--white -projects-slider-next-">
-                                <svg class="icon">
-                                    <use xlink:href="img/icons.svg#to-right" />
-                                </svg>
-                            </button>
-
-                        </div>
+                <div class="d-lg-flex flex-align-center ">
+                    <div class="title">НАШИ ПРОЕКТЫ</div>
+                    <div class="catalog-nav ml-auto">
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover active">ВСЕ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КВАРТИРЫ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">ОФИСЫ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КАФЕ</a>
                     </div>
-                    <div class="projects-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                <% for(let i=0; i < 12; i++){ %>
-                                    <div class="projects-item swiper-slide" data-fancybox-modal
-                                        data-src="dialog-product.html">
-                                        <div class="projects-item__img">
-                                            <img src="img/projects-1.jpg" alt="">
-                                        </div>
-                                        <button
-                                            class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
-                                            <img src="img/zoom.svg" alt="">
-                                        </button>
-                                        <div class="projects-item__content py-6 px-5">
-                                            <div
-                                                class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
-                                                НАЗВАНИЕ <br>ПРОЕКТА
-                                            </div>
-                                            <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание проекта
-                                                на две <br> или три
-                                                строки</div>
-                                            <div
-                                                class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
-                                                КВАРТИРА</div>
-                                        </div>
+                    <div class="projects-slider-top">
+                        <div class="projects-slider-pagination">
+                            <div class="projects-slider-pagination-num">О1</div>
+                            <div class="projects-slider-pagination-dots">
+                                <div class="projects-slider-pagination-dot"></div>
+                                <div class="projects-slider-pagination-dot"></div>
+                                <div class="projects-slider-pagination-dot"></div>
+                                <div class="projects-slider-pagination-dot"></div>
+                            </div>
+                            <div class="projects-slider-pagination-num">О4</div>
+                        </div>
+
+                        <button
+                            class="projects-slider-top-arrow projects-slider-top-prev btn btn--white -projects-slider-prev- ml-sm-2">
+                            <svg class="icon">
+                                <use xlink:href="/img/icons.svg#to-left" />
+                            </svg>
+                        </button>
+                        <button class="projects-slider-top-arrow btn btn--white -projects-slider-next-">
+                            <svg class="icon">
+                                <use xlink:href="/img/icons.svg#to-right" />
+                            </svg>
+                        </button>
+
+                    </div>
+                </div>
+                <div class="projects-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <% for(let i=0; i < 12; i++){ %>
+                                <div class="projects-item swiper-slide" data-fancybox-modal
+                                    data-src="dialog-product.html">
+                                    <div class="projects-item__img">
+                                        <img src="/img/projects-1.jpg" alt="">
                                     </div>
-                                    <% } %>
-                            </div>
-
-                            <button
-                                class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
-                                <svg class="icon">
-                                    <use xlink:href="img/icons.svg#to-left" />
-                                </svg>
-                            </button>
-                            <button
-                                class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
-                                <svg class="icon">
-                                    <use xlink:href="img/icons.svg#to-right" />
-                                </svg>
-                            </button>
+                                    <button
+                                        class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
+                                        <img src="/img/zoom.svg" alt="">
+                                    </button>
+                                    <div class="projects-item__content py-6 px-5">
+                                        <div class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
+                                            НАЗВАНИЕ <br>ПРОЕКТА
+                                        </div>
+                                        <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание проекта
+                                            на две <br> или три
+                                            строки</div>
+                                        <div class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
+                                            КВАРТИРА</div>
+                                    </div>
+                                </div>
+                                <% } %>
                         </div>
+
+                        <button class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
+                            <svg class="icon">
+                                <use xlink:href="/img/icons.svg#to-left" />
+                            </svg>
+                        </button>
+                        <button class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
+                            <svg class="icon">
+                                <use xlink:href="/img/icons.svg#to-right" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="partners-title title">НАШИ ПАРТНЁРЫ</div>
-                <div class="partners-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/Logo_Izumrud.png" alt="">
-                        </div>
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/logo_Mytoni.png" alt="">
-                        </div>
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/Logo_Luminotti.png" alt="">
-                        </div>
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/Logo_SWG.png" alt="">
-                        </div>
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/logo-technolight.png" alt="">
-                        </div>
-                        <div class="partners-item swiper-slide">
-                            <img src="img/partners/bobox.png" alt="">
-                        </div>
+            <div class="running-line swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide running-line-item">
+                        <b>НОВИНКА!</b> Вентиляционный щелевой диффузор
+                    </div>
+                    <div class="swiper-slide running-line-item">
+                        <b>НОВИНКА!</b> Вентиляционный щелевой диффузор
+                    </div>
+                    <div class="swiper-slide running-line-item">
+                        <b>НОВИНКА!</b> Вентиляционный щелевой диффузор
                     </div>
                 </div>
-            </section>
-
+            </div>
             <script>
-                const projectsSlider = new Swiper('.projects-slider .swiper', {
-                    slidesPerView: 3,
-                    spaceBetween: 8,
-                    // touchRatio: 0,
-                    // watchSlidesProgress: true,
-                    // navigation: {
-                    //     prevEl: '.-projects-slider-prev-',
-                    //     nextEl: '.-projects-slider-next-',
-                    // },
-                    pagination: {
-                        type: 'custom',
-                        el: '.projects-slider-pagination',
-                        renderCustom: (swiper, current, total) => {
-                            return `
+                new Swiper('.running-line', {
+                    slidesPerView: 'auto',
+                    loop: true,
+                    speed: 4000,
+                    touchRatio: 0,
+                    spaceBetween: 36,
+                    autoplay: {
+                        delay: 0,
+
+                    }
+                })
+            </script>
+
+            <div class="partners-title title">НАШИ ПАРТНЁРЫ</div>
+            <div class="partners-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/Logo_Izumrud.png" alt="">
+                    </div>
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/logo_Mytoni.png" alt="">
+                    </div>
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/Logo_Luminotti.png" alt="">
+                    </div>
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/Logo_SWG.png" alt="">
+                    </div>
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/logo-technolight.png" alt="">
+                    </div>
+                    <div class="partners-item swiper-slide">
+                        <img src="/img/partners/bobox.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const projectsSlider = new Swiper('.projects-slider .swiper', {
+                slidesPerView: 3,
+                spaceBetween: 8,
+                // touchRatio: 0,
+                // watchSlidesProgress: true,
+                // navigation: {
+                //     prevEl: '.-projects-slider-prev-',
+                //     nextEl: '.-projects-slider-next-',
+                // },
+                pagination: {
+                    type: 'custom',
+                    el: '.projects-slider-pagination',
+                    renderCustom: (swiper, current, total) => {
+                        return `
                             <div class="projects-slider-pagination-num">${current < 10 ? '0' : ''}${current}</div>
                             <div class="projects-slider-pagination-dots">
                                 <div class="projects-slider-pagination-dot ${current % 4 == 1 ? 'active' : ''}"></div>
@@ -428,61 +780,63 @@
                                 <div class="projects-slider-pagination-dot ${current % 4 == 0 ? 'active' : ''}"></div>
                             </div>
                             <div class="projects-slider-pagination-num">${total < 10 ? '0' : ''}${total}</div>`;
-                        }
-                    },
-                    // autoHeight: true
-
-                    on: {
-                        slideChange: render
-                    },
-                    breakpoints: {
-                        600: {
-                            slidesPerView: 3,
-                            spaceBetween: 18,
-                        },
-                        900: {
-                            slidesPerView: 4,
-                            spaceBetween: 28,
-                        },
                     }
-                })
-                render()
-                function render() {
-                    document.querySelectorAll('.-projects-slider-prev-')
-                        .forEach((el) => el.disabled = projectsSlider.isBeginning)
-                    document.querySelectorAll('.-projects-slider-next-')
-                        .forEach((el) => el.disabled = projectsSlider.isEnd)
+                },
+                // autoHeight: true
 
+                on: {
+                    slideChange: render
+                },
+                breakpoints: {
+                    600: {
+                        slidesPerView: 3,
+                        spaceBetween: 18,
+                    },
+                    900: {
+                        slidesPerView: 4,
+                        spaceBetween: 28,
+                    },
+                }
+            })
+            render()
+            function render() {
+                document.querySelectorAll('.-projects-slider-prev-')
+                    .forEach((el) => el.disabled = projectsSlider.isBeginning)
+                document.querySelectorAll('.-projects-slider-next-')
+                    .forEach((el) => el.disabled = projectsSlider.isEnd)
+
+            }
+
+            document.addEventListener('click', (event) => {
+                if (event.target.closest('.-projects-slider-prev-')) {
+                    projectsSlider.slidePrev();
+                    render()
                 }
 
-                document.addEventListener('click', (event) => {
-                    if (event.target.closest('.-projects-slider-prev-')) {
-                        projectsSlider.slidePrev();
-                        render()
+                if (event.target.closest('.-projects-slider-next-')) {
+                    projectsSlider.slideNext();
+                    render()
+                }
+            })
+
+
+            new Swiper('.partners-slider', {
+                slidesPerView: 'auto',
+                spaceBetween: 50,
+                loop: true,
+                speed: 3000,
+                autoplay: {
+                    delay: 0,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    679.98: {
+                        spaceBetween: 100,
                     }
-
-                    if (event.target.closest('.-projects-slider-next-')) {
-                        projectsSlider.slideNext();
-                        render()
-                    }
-                })
+                }
+            })
+        </script>
 
 
-                new Swiper('.partners-slider', {
-                    slidesPerView: 'auto',
-                    spaceBetween: 50,
-                    loop: true,
-                    speed: 3000,
-                    autoplay: {
-                        delay: 0,
-                        disableOnInteraction: false
-                    },
-                    breakpoints: {
-                        679.98: {
-                            spaceBetween: 100,
-                        }
-                    }
-                })
-            </script>
 
-            <%= _.template(require('./html-includes/footer.html').default)() %>
+        <%= _.template(require('./html-includes/footer.html').default)() %>

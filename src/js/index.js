@@ -3,6 +3,7 @@ import inputmask from "./inputmask";
 import scrollTo from "./scrollTo";
 import mobile from "./mobile";
 import toggle from 'npm-kit-toggle';
+import tab from 'npm-kit-tab';
 import ripple from 'npm-kit-ripple';
 import Swiper, { Navigation, Pagination, Scrollbar, Autoplay, Grid, Thumbs, EffectFade, Lazy } from 'swiper';
 
@@ -24,6 +25,7 @@ function loadHandler() {
 	scrollTo.init()
 	mobile.init()
 	toggle.init()
+	tab.init()
 	ripple.init()
 	inputmask.init(document)
 
