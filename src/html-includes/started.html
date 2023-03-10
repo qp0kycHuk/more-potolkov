@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="started-inner">
+    <div class="started-inner started-content">
         <div class="container">
             <div class="started-title">
                 Будущее <br>
@@ -92,58 +92,37 @@
             <a href="javascript:;" class="started-soc-item btn btn--link link-hover">Ig</a>
         </div>
 
-        <% if (data.title == 'index') { %>
-            <div class="started-news">
-                <a href="javascript:;" class="started-news-item link-hover-wrapper">
-                    <div class="text-body-0 text--uppercase text--demibold mb-4 link-hover">3D ШОУ-РУМ</div>
-                    <div class="text-body-2 lh-1-5">
-                        Посмотрите варианты освещения <br> и профилей в нашем шоу-руме
-                    </div>
-                </a>
-                <!-- <a href="javascript:;" class="started-news-item link-hover-wrapper">
+
+        <div class="started-news">
+            <a href="javascript:;" class="started-news-item link-hover-wrapper">
+                <div class="text-body-0 text--uppercase text--demibold mb-4 link-hover">3D ШОУ-РУМ</div>
+                <div class="text-body-2 lh-1-5">
+                    Посмотрите варианты освещения <br> и профилей в нашем шоу-руме
+                </div>
+            </a>
+            <!-- <a href="javascript:;" class="started-news-item link-hover-wrapper">
               <div class="text-body-0 text--uppercase text--demibold mb-4 link-hover">НАШИ РАБОТЫ</div>
               <div class="text-body-2 lh-1-5">
                 Посмотрите сделанные <br> нами объекты
               </div>
             </a> -->
-            </div>
-        <% } %>
+        </div>
 
-        <% if (data.title == 'about') { %>
-            <div class="started-news started-news--items">
-                <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
-                    <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-1</div>
-                    <div class="text-body-2 lh-1-5">
-                        Какой-то текст о <br> преимуществах компании
-                    </div>
-                </a>
-                <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
-                    <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-2</div>
-                    <div class="text-body-2 lh-1-5">
-                        Какой-то текст о <br> преимуществах компании
-                    </div>
-                </a>
-                <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
-                    <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-3</div>
-                    <div class="text-body-2 lh-1-5">
-                        Какой-то текст <br> преимуществах компании
-                    </div>
-                </a>
-            </div>
-        <% } %>
 
-        <% if (data.title == 'index') { %>
-            <button class="started-scroll btn btn-icon btn--contur" data-scroll="#catalog">
-                <div>
-                    <svg class="icon">
-                        <use xlink:href="img/icons.svg#to-down" />
-                    </svg>
-                    <svg class="icon">
-                        <use xlink:href="img/icons.svg#to-down" />
-                    </svg>
-                </div>
-            </button>
-        <% } %>
+
+
+
+
     </div>
+    <button class="started-scroll btn btn-icon btn--contur" data-scroll="#catalog">
+        <div>
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#to-down" />
+            </svg>
+            <svg class="icon">
+                <use xlink:href="img/icons.svg#to-down" />
+            </svg>
+        </div>
+    </button>
 
 </section>

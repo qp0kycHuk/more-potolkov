@@ -368,6 +368,12 @@ body {
 	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
+	height: 980px;
+
+	@media(max-width:$lg) {
+		height: auto;
+
+	}
 
 	@media(max-width:$sm) {
 		padding-bottom: 20px;
@@ -521,14 +527,17 @@ body {
 		position: absolute;
 		bottom: 42px;
 		left: calc(50% - 27px);
+		z-index: 3;
 
-		@media (max-width:1600px) {
-			left: 40px;
+		@media (max-width:$lg) {
+			bottom: 20px;
 		}
 
-		@media (max-width:1400px) {
-			left: 32px;
+		@media (max-width:$md) {
+			display: none;
 		}
+
+
 
 		&:before {
 			content: '';
@@ -1857,12 +1866,14 @@ body {
 		background: #1E1E1E;
 		padding-left: 110px;
 		padding-right: 60px;
-		max-width: 500px;
+		width: 500px;
+		min-width: 500px;
 
 		@media(max-width: 1850px) {
 			padding: 30px;
+			min-width: 0;
 			max-width: 100%;
-
+			width: 100%;
 		}
 
 		@media(max-width: $lg) {
@@ -1882,13 +1893,13 @@ body {
 		}
 	}
 
+	&:not(.toggle-active) &-form {
+		display: none;
+	}
+
 	&-form {
 		background: #1E1E1E;
 		padding: 32px;
-
-		&:not(.toggle-active) {
-			display: none;
-		}
 
 		@media(max-width: $lg) {
 			padding: 0;
@@ -1901,6 +1912,7 @@ body {
 			@media(max-width: 1600px) {
 				display: grid;
 				grid-template-columns: 1fr 1fr;
+				margin-bottom: 36px;
 			}
 
 			@media(max-width: $md) {
@@ -1959,6 +1971,39 @@ body {
 		&-content {
 			display: flex;
 			gap: 30px;
+		}
+
+		&-files {
+			position: relative;
+
+			@media(max-width: 1600px) {
+				grid-column: 1/-1;
+				padding-top: 0;
+			}
+
+			&-list {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+				margin-top: 10px;
+
+				@media(min-width: 1600px) {
+					margin-top: 0;
+					max-height: 120px;
+					overflow: auto;
+					position: absolute;
+					left: 0;
+					width: 100%;
+					top: calc(100% + 10px);
+				}
+			}
+
+			&-item {
+				opacity: .6;
+				display: flex;
+				align-items: center;
+
+			}
 		}
 
 		&-file-input {
@@ -2037,6 +2082,19 @@ body {
 
 		&-next {
 			right: 20px;
+
+			&:after,
+			&:before {
+				content: '';
+				position: absolute;
+				inset: -1px;
+				border: inherit;
+				animation: pulse-contur 2s infinite;
+			}
+
+			&:after {
+				animation-delay: .5s;
+			}
 		}
 
 		&-top {
@@ -2061,7 +2119,28 @@ body {
 				}
 			}
 
+			&-next {
+				@media(max-width: $sm) {
 
+					// &:after,
+					&:before {
+						content: '';
+						position: absolute;
+						width: 20px;
+						height: 20px;
+						left: calc(50% - 10px);
+						top: calc(50% - 10px);
+						background: rgba(255, 255, 255, 0.25);
+						border-radius: 50%;
+						animation: pulse-contur 2s infinite;
+					}
+
+					&:after {
+						animation-delay: .5s;
+					}
+				}
+
+			}
 		}
 
 		&-pagination {
@@ -2289,4 +2368,10 @@ body {
 		padding-left: 36px;
 		border-left: 2px solid #000;
 	}
+}
+
+.clipped-text {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

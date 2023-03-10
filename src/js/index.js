@@ -2,6 +2,7 @@ import fancybox from "./fancybox";
 import inputmask from "./inputmask";
 import scrollTo from "./scrollTo";
 import mobile from "./mobile";
+import qwizFiles from "./qwizFiles";
 import toggle from 'npm-kit-toggle';
 import tab from 'npm-kit-tab';
 import ripple from 'npm-kit-ripple';
@@ -21,6 +22,7 @@ window.addEventListener('load', () => loadHandler())
 // })
 
 function loadHandler() {
+	qwizFiles.init()
 	fancybox.init()
 	scrollTo.init()
 	mobile.init()
@@ -33,3 +35,5 @@ function loadHandler() {
 	ripple.attach('.waved')
 	ripple.deAttach('.btn--link')
 }
+
+
