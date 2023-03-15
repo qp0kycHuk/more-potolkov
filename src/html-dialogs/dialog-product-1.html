@@ -1,0 +1,95 @@
+<div class="dialog-product">
+    <div class="dialog-product-gallery ">
+        <div class="dialog-product-picture swiper">
+            <div class="swiper-wrapper">
+                <a href="https://www.youtube.com/watch?v=Qsfe-trkZ20" data-fancybox
+                    class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                    <div class="dialog-product-img-play btn btn-fab btn--primary btn--fill">
+                        <svg class="icon">
+                            <use xlink:href="img/icons.svg#play" />
+                        </svg>
+                    </div>
+                </a>
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-img image image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="dialog-product-thumbs swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                    <div class="dialog-product-thumb-play btn btn-fab btn--primary btn--fill">
+                        <svg class="icon">
+                            <use xlink:href="img/icons.svg#play" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide dialog-product-thumb image card-action image--box">
+                    <img src="img/test.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-product-content">
+        <div class="dialog-product-title">
+            Встраиваемы
+            светильник
+            MPX 122
+        </div>
+        <div class="dialog-product-desc">
+            <div class="fade-80 mb-4 mb-md-8">Арт.</div>
+            <div class="text--demibold">Характеристики</div>
+            <div class="text-body-2 text-md-body-1 lh-1-5">
+                Уникальный интерьер в помещении можно создать с помощью
+                натяжных потолков фирмы Barrisol. Эксперты называют продукцию
+                французского бренда эталоном в сфере потолочной отделки.
+                <br><br>
+                Компания занимает лидирующие позиции на европейском рынке
+                благодаря долговечному и красивому материалу.
+                <br><br>
+                Производитель предлагает 6 вариантов фактуры, около 90 цветовых
+                решений, а также 12-летнюю гарантию.
+                <br><br>
+                Если добавить к этому экологичность (А+) и простоту в применении,
+                то продукция становится привлекательной с точки зрения дизайна
+                и надежности.
+            </div>
+        </div>
+        <div class="mt-5">
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A2e5040778f1101d4afacf107320478c422ca01f0d00c537ed96eff00a6fd0ffc&amp;source=constructor"
+                width="100%" height="240" frameborder="0"></iframe>
+        </div>
+        <button class="dialog-product-btn btn btn--contur w-100 w-md-auto">заказать</button>
+    </div>
+</div>
+
+<script>
+    (() => {
+        const thumbs = new Swiper('.dialog-product-thumbs', {
+            slidesPerView: 'auto',
+            spaceBetween: 5
+        })
+        const slider = new Swiper('.dialog-product-picture', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            thumbs: {
+                swiper: thumbs
+            }
+        })
+    })();
+</script>

@@ -628,15 +628,15 @@
             </script> -->
 
         <section class="projects section bg-black">
-            <div class="projects-slider-wrapper">
+            <div class="projects-slider-wrapper" data-tab-cover>
 
                 <div class="d-lg-flex flex-align-center ">
                     <div class="title">НАШИ ПРОЕКТЫ</div>
                     <div class="catalog-nav ml-auto">
-                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover active">ВСЕ</a>
-                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КВАРТИРЫ</a>
-                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">ОФИСЫ</a>
-                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">КАФЕ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover" data-tab-link="1">ВСЕ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover" data-tab-link="2">КВАРТИРЫ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover" data-tab-link="3">ОФИСЫ</a>
+                        <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover" data-tab-link="4">КАФЕ</a>
                     </div>
                     <div class="projects-slider-top">
                         <div class="projects-slider-pagination">
@@ -656,7 +656,8 @@
                                 <use xlink:href="/img/icons.svg#to-left" />
                             </svg>
                         </button>
-                        <button class="projects-slider-top-arrow projects-slider-top-next  btn btn--white -projects-slider-next-">
+                        <button
+                            class="projects-slider-top-arrow projects-slider-top-next  btn btn--white -projects-slider-next-">
                             <svg class="icon">
                                 <use xlink:href="/img/icons.svg#to-right" />
                             </svg>
@@ -664,43 +665,190 @@
 
                     </div>
                 </div>
-                <div class="projects-slider">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <% for(let i=0; i < 12; i++){ %>
-                                <div class="projects-item swiper-slide" data-fancybox-modal
-                                    data-src="dialog-product.html">
-                                    <div class="projects-item__img">
-                                        <img src="/img/projects-1.jpg" alt="">
-                                    </div>
-                                    <button
-                                        class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
-                                        <img src="/img/zoom.svg" alt="">
-                                    </button>
-                                    <div class="projects-item__content py-6 px-5">
-                                        <div class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
-                                            НАЗВАНИЕ <br>ПРОЕКТА
+                <div class="tab-content-cover">
+                    <div class="tab-content" data-tab-content="1">
+                        <div class="projects-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <% for(let i=0; i < 12; i++){ %>
+                                        <div class="projects-item swiper-slide" data-fancybox-modal
+                                            data-src="dialog-product-1.html">
+                                            <div class="projects-item__img">
+                                                <img src="/img/projects-1.jpg" alt="">
+                                            </div>
+                                            <button
+                                                class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
+                                                <img src="/img/zoom.svg" alt="">
+                                            </button>
+                                            <div class="projects-item__content py-6 px-5">
+                                                <div
+                                                    class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
+                                                    НАЗВАНИЕ <br>ПРОЕКТА
+                                                </div>
+                                                <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание
+                                                    проекта
+                                                    на две <br> или три
+                                                    строки</div>
+                                                <div
+                                                    class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
+                                                    ВСЕ</div>
+                                            </div>
                                         </div>
-                                        <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание проекта
-                                            на две <br> или три
-                                            строки</div>
-                                        <div class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
-                                            КВАРТИРА</div>
-                                    </div>
+                                        <% } %>
                                 </div>
-                                <% } %>
-                        </div>
 
-                        <button class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
-                            <svg class="icon">
-                                <use xlink:href="/img/icons.svg#to-left" />
-                            </svg>
-                        </button>
-                        <button class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
-                            <svg class="icon">
-                                <use xlink:href="/img/icons.svg#to-right" />
-                            </svg>
-                        </button>
+                                <button
+                                    class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-left" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-right" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-tab-content="2">
+                        <div class="projects-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <% for(let i=0; i < 12; i++){ %>
+                                        <div class="projects-item swiper-slide" data-fancybox-modal
+                                            data-src="dialog-product.html">
+                                            <div class="projects-item__img">
+                                                <img src="/img/projects-1.jpg" alt="">
+                                            </div>
+                                            <button
+                                                class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
+                                                <img src="/img/zoom.svg" alt="">
+                                            </button>
+                                            <div class="projects-item__content py-6 px-5">
+                                                <div
+                                                    class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
+                                                    НАЗВАНИЕ <br>ПРОЕКТА
+                                                </div>
+                                                <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание
+                                                    проекта
+                                                    на две <br> или три
+                                                    строки</div>
+                                                <div
+                                                    class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
+                                                    КВАРТИРЫ</div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <button
+                                    class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-left" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-right" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-tab-content="3">
+                        <div class="projects-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <% for(let i=0; i < 12; i++){ %>
+                                        <div class="projects-item swiper-slide" data-fancybox-modal
+                                            data-src="dialog-product.html">
+                                            <div class="projects-item__img">
+                                                <img src="/img/projects-1.jpg" alt="">
+                                            </div>
+                                            <button
+                                                class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
+                                                <img src="/img/zoom.svg" alt="">
+                                            </button>
+                                            <div class="projects-item__content py-6 px-5">
+                                                <div
+                                                    class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
+                                                    НАЗВАНИЕ <br>ПРОЕКТА
+                                                </div>
+                                                <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание
+                                                    проекта
+                                                    на две <br> или три
+                                                    строки</div>
+                                                <div
+                                                    class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
+                                                    ОФИСЫ</div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <button
+                                    class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-left" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-right" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" data-tab-content="4">
+                        <div class="projects-slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <% for(let i=0; i < 12; i++){ %>
+                                        <div class="projects-item swiper-slide" data-fancybox-modal
+                                            data-src="dialog-product.html">
+                                            <div class="projects-item__img">
+                                                <img src="/img/projects-1.jpg" alt="">
+                                            </div>
+                                            <button
+                                                class="projects-item-zoom btn btn--yellow btn--light btn-icon swiper-no-swiping">
+                                                <img src="/img/zoom.svg" alt="">
+                                            </button>
+                                            <div class="projects-item__content py-6 px-5">
+                                                <div
+                                                    class="text-h4 projects-item__title text-md-h1 text--regular lh-1-5 mb-5">
+                                                    НАЗВАНИЕ <br>ПРОЕКТА
+                                                </div>
+                                                <div class="text-body-1 projects-item__desc lh-1-5">Краткое описание
+                                                    проекта
+                                                    на две <br> или три
+                                                    строки</div>
+                                                <div
+                                                    class="projects-item__name text-body-1 text-md-subtitle-2 text--regular">
+                                                    КАФЕ</div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <button
+                                    class="projects-slider-prev -projects-slider-prev- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-left" />
+                                    </svg>
+                                </button>
+                                <button
+                                    class="projects-slider-next -projects-slider-next- btn btn-icon btn--contur btn--white">
+                                    <svg class="icon">
+                                        <use xlink:href="/img/icons.svg#to-right" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
