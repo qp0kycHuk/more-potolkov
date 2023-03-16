@@ -62,7 +62,7 @@ document.addEventListener('submit', (event) => {
     btn.style.width = btn.clientWidth + 'px'
     btn.innerHTML = '<div class="text-small progress progress-circle fade-80"></div>'
 
-    fetch('/submitHandler.php', {
+    fetch('/modals/php/submitHandler.php', {
         method: 'post',
         body: formData
     })
@@ -80,7 +80,7 @@ document.addEventListener('submit', (event) => {
             event.target.dispatchEvent(customEvent);
 
             window.Fancybox.close()
-            window.Fancybox.modal.open('/dialog-success.php', { type: 'ajax' })
+            window.Fancybox.modal.open('/modals/dialog-success.php', { type: 'ajax' })
             event.target.reset()
 
 
