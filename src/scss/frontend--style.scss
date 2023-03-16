@@ -1136,6 +1136,7 @@ body {
 			color: #000;
 		}
 	}
+
 	&-thumb {
 		position: relative;
 
@@ -2147,6 +2148,10 @@ body {
 			margin-left: auto;
 			display: flex;
 			align-items: center;
+
+			&:not(.tab-active) {
+				display: none;
+			}
 
 			@media(max-width:1240px) {
 				position: absolute;
