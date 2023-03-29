@@ -4,8 +4,9 @@
 
 .fancybox-custom-modal {
   .fancybox__slide {
-    padding: 15px;
 
+    max-width: 100%;
+    padding: 15px;
   }
 
   .fancybox__content,
@@ -14,38 +15,38 @@
   }
 
   .fancybox__content {
-    padding   : 0;
+    max-width: 100%;
+    padding: 0;
     background: none;
-
   }
 
   .carousel__button.is-close {
-    position       : fixed;
-    right          : 0;
-    top            : 0;
-    padding        : 16px;
-    width          : 68px;
-    height         : 68px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 68px;
+    height: 68px;
+    padding: 16px;
     animation-delay: .35s !important;
 
     @media(max-width:$sm) {
       position: absolute;
-      width   : 32px;
-      height  : 32px;
-      top     : 16px;
-      right   : 16px;
-      padding : 0;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      background: #F3F3F5;
 
       border-radius: 50%;
-      background   : #F3F3F5;
     }
 
     svg {
       @media(max-width:$sm) {
-        filter: none;
-        color : #000;
-        width : 12px;
+        width: 12px;
         height: 12px;
+        color: #000;
+        filter: none;
       }
     }
   }

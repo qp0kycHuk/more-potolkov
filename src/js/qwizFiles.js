@@ -49,6 +49,8 @@ function init() {
 document.addEventListener('submit', (event) => {
     if (!event.target.classList.contains('quiz')) return
     event.preventDefault()
+    console.log('qwiz-submit');
+    console.log(items);
 
     const formData = new FormData(event.target)
     items.forEach((item) => {

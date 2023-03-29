@@ -36,12 +36,15 @@
   },
   "dependencies": {
     "@ashthornton/asscroll": "^2.0.11",
-    "@fancyapps/ui": "^4.0.27",
+    "@fancyapps/ui": "^4.0.31",
+    "debounce": "^1.2.1",
     "inputmask": "^5.0.7",
     "locomotive-scroll": "^4.1.4",
     "npm-kit-ripple": "^1.5.6",
     "npm-kit-tab": "^1.0.0",
     "npm-kit-toggle": "^1.1.0",
-    "swiper": "^8.2.4"
+    "swiper": "^8.2.4",
+    "throttle-debounce": "^5.0.0",
+    "wowjs": "^1.1.3"
   }
 }

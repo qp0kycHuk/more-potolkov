@@ -5,50 +5,50 @@
 } %>
 
 <%= _.template(require('./html-includes/header.html').default)() %>
-    
-    <%= _.template(require('./html-includes/started.html').default)({data}) %>
+
+<%= _.template(require('./html-includes/started.html').default)({data}) %>
 
 
-    <% for(let i=0; i < 3; i++){ %>
-      <section class="catalog section" id="catalog">
-        <div class="section-line section-line--1"></div>
-        <div class="section-line section-line--2"></div>
-        <div class="section-line section-line--3"></div>
+<% for(let i=0; i < 3; i++){ %>
+<section class="catalog section" id="catalog">
+  <div class="section-line section-line--1"></div>
+  <div class="section-line section-line--2"></div>
+  <div class="section-line section-line--3"></div>
 
 
 
-        <div class="catalog-header">
-          <div class="catalog-title">ОСВЕЩЕНИЕ</div>
-          <div class="catalog-nav">
-            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Все</a>
-            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover active">Трековые системы</a>
-            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые линии</a>
-            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые ниши</a>
-            <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые окна</a>
-          </div>
-        </div>
+  <div class="catalog-header">
+    <div class="catalog-title">ОСВЕЩЕНИЕ</div>
+    <div class="catalog-nav catalog-nav--horisontal-mobile">
+      <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Все</a>
+      <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover active">Трековые системы</a>
+      <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые линии</a>
+      <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые ниши</a>
+      <a href="javascript:;" class="catalog-nav-item btn btn--link link-hover">Световые окна</a>
+    </div>
+  </div>
 
-        <div class="catalog-filter mb-5">
-          <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">Новинки</a>
-          <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">По цене</a>
-        </div>
+  <div class="catalog-filter mb-5">
+    <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">Новинки</a>
+    <a class="catalog-filter__item btn btn--link link-hover" href="javascript:;">По цене</a>
+  </div>
 
-        <div class="catalog-grid">
-          <% for(let i=0; i < 6; i++){ %>
-            <div class="catalog-item card-action" data-fancybox-modal data-src="dialog-product.html" data-type="ajax">
-              <div class="catalog-item__img image image--box mb-4">
-                <img src="img/test.jpg" alt="">
-              </div>
-              <div class="catalog-item-title text-body-2">Трековый подвесной светильник </div>
-            </div>
-            <% } %>
+  <div class="catalog-grid">
+    <% for(let i=0; i < 6; i++){ %>
+    <div class="catalog-item card-action" data-fancybox-modal data-src="dialog-product.html" data-type="ajax">
+      <div class="catalog-item__img image image--box mb-4">
+        <img src="img/test.jpg" alt="">
+      </div>
+      <div class="catalog-item-title text-body-2">Трековый подвесной светильник </div>
+    </div>
+    <% } %>
 
-        </div>
+  </div>
 
-        <button class="catalog-btn btn btn--contur">
-          Показать все
-        </button>
-      </section>
-      <% } %>
+  <button class="catalog-btn btn btn--contur">
+    Показать все
+  </button>
+</section>
+<% } %>
 
-      <%= _.template(require('./html-includes/footer.html').default)() %>
+<%= _.template(require('./html-includes/footer.html').default)() %>

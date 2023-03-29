@@ -9,18 +9,18 @@
 
 	--spacing: 4px;
 
-	--radius-small : 4px;
+	--radius-small: 4px;
 	--radius-middle: 8px;
-	--radius-large : 12px;
+	--radius-large: 12px;
 
 	--media-lg: #{$lg};
 	--media-md: #{$md};
 	--media-sm: #{$sm};
 
 	--font-base: 'Montserrat',
-	Arial,
-	Helvetica,
-	sans-serif;
+		Arial,
+		Helvetica,
+		sans-serif;
 
 	--zi-l1: 321;
 	--zi-l2: 322;
@@ -622,6 +622,11 @@ body {
 		right: 40px;
 		transform: translateY(-50%);
 
+		@media(max-width:$md) {
+			top: 50px;
+			transform: none;
+		}
+
 		&-item {
 			position: relative;
 
@@ -837,10 +842,12 @@ body {
 	background: url("../img/catalog-bg.jpg") no-repeat center top / 100% auto, #000;
 
 	@media(max-width: 769px) {
+		width: calc(100% + 20px);
+		margin-left: -10px;
 		padding-top: 40px;
-		padding-right: 13px;
+		padding-right: 15px;
 		padding-bottom: 26px;
-		padding-left: 13px;
+		padding-left: 15px;
 		background: #1E1E1E;
 		border-radius: 25px;
 	}
@@ -899,6 +906,18 @@ body {
 			align-items: flex-start;
 			flex-direction: column;
 			gap: 20px;
+		}
+
+		&--horisontal-mobile {
+			@media(max-width: 769px) {
+				flex-direction: row;
+				width: calc(100% + 30px);
+				overflow: auto;
+				margin: -15px;
+				padding: 15px;
+				white-space: nowrap;
+			}
+
 		}
 
 		&-item {
@@ -1002,96 +1021,147 @@ body {
 .dialog-product {
 	display: flex;
 	align-items: flex-start;
-	width: 1800px;
+	width: 1820px;
 	max-width: 100%;
 	padding: 36px;
+	padding-right: 100px;
 	background: #000000;
 	border-radius: 25px;
 
 	@media(max-width: 1800px) {
-		& {
-			width: 1200px;
-		}
+		width: 1200px;
 
-		&-gallery {
-			min-height: 700px;
-			margin-right: 80px;
-		}
-
-		&-thumbs {
-			right: 0;
-			bottom: 50px;
-		}
-
-		&-content {
-			padding-top: 0;
-		}
 	}
 
-	@media(max-width: 1200px) {
-		& {
-			flex-direction: column;
-			width: 380px;
-			padding: 40px 18px;
-			border-radius: 0;
-		}
+	@media(max-width: $lg) {
 
-		&-gallery {
-			width: 100%;
-			min-height: 450px;
-			margin-right: 0;
-			margin-bottom: 30px;
-		}
+		flex-direction: column;
+		width: 480px;
+		padding: 40px 15px;
+		border-radius: 0;
 
-		&-thumbs {
-			bottom: 0;
-			left: 0;
-		}
-
-		&-thumb {
-			left: 0;
-			width: 86px;
-		}
-
-		&-title {
-			margin-left: 18px;
-			font-size: 24px;
-		}
-
-		&-btn {
-			margin-top: 50px;
-		}
 	}
 
 	@media(max-width: 380px) {
-		& {
-			width: 320px;
-		}
+		width: 100%;
 
-		&-gallery {
-			min-height: 380px;
-		}
 	}
 
 	&-gallery {
 		position: relative;
-		width: 45%;
+		width: 55%;
 		margin-right: 150px;
+
+		@media(max-width: 1800px) {
+			// min-height: 700px;
+			margin-right: 80px;
+			padding-bottom: 160px;
+
+		}
+
+		@media(max-width: $lg) {
+			width: 100%;
+			// min-height: 450px;
+			margin-right: 0;
+			margin-bottom: 30px;
+			padding-bottom: 0;
+
+
+		}
+
+		@media(max-width: 380px) {
+			// min-height: 380px;
+
+		}
+	}
+
+	&-picture {
+		@media(max-width: $lg) {
+			width: calc(100% + 30px);
+			margin-left: -15px;
+			padding-right: 20px;
+			padding-right: 35px;
+			padding-left: 15px;
+		}
 	}
 
 	&-thumbs {
 		position: absolute;
-		right: 32px;
+		right: 0;
 		bottom: 32px;
+		width: 100%;
+		padding-right: 180px;
+		padding-left: 180px;
+		z-index: 2;
+
+		@media(max-width: 1800px) {
+			right: 0;
+			bottom: 50px;
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+
+		@media(max-width: $lg) {
+			// display: none;
+			position: relative;
+			bottom: 0;
+			margin-top: 16px;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		&-next,
+		&-prev {
+			--size: 80px;
+			position: absolute;
+			top: calc(50% - var(--size) / 2);
+			font-size: 24px;
+
+			@media(max-width: $lg) {
+				display: none;
+			}
+		}
+
+		&-prev {
+			left: 70px;
+
+			@media(max-width: 1800px) {
+				left: 0px;
+
+			}
+		}
+
+		&-next {
+			right: 70px;
+
+			@media(max-width: 1800px) {
+				right: 0px;
+
+			}
+		}
 	}
 
 	&-thumb {
 		width: 120px;
 		cursor: pointer;
+
+		@media(max-width: $lg) {
+			left: 0;
+			width: 86px;
+		}
 	}
 
 	&-content {
 		padding-top: 40px;
+
+		@media(max-width: 1800px) {
+			padding-top: 0;
+
+		}
+
+		@media(max-width: $lg) {
+			width: 100%;
+		}
 	}
 
 	&-title {
@@ -1099,6 +1169,11 @@ body {
 		margin-bottom: 24px;
 		font-size: 35px;
 		font-weight: 600;
+
+		@media(max-width: $lg) {
+			margin-left: 18px;
+			font-size: 24px;
+		}
 
 		&:before {
 			content: '';
@@ -1113,12 +1188,38 @@ body {
 
 	&-desc {
 		line-height: 2;
+
+
+		@media(max-width: $lg) {
+			padding: 15px;
+			border: 1px solid #C8C8C8;
+
+			&:not(.toggle-active) {
+				display: none;
+			}
+		}
+	}
+
+	&-more {
+		@media(min-width: $lg) {
+			display: none;
+		}
+
+		@media(max-width: $lg) {
+			&.toggle-active {
+				display: none;
+			}
+		}
 	}
 
 	&-btn {
 		margin-top: 80px;
 		background: #141414;
 		border: 1px solid #505050;
+
+		@media(max-width: $lg) {
+			margin-top: 50px;
+		}
 	}
 
 	&-color {
@@ -1135,6 +1236,7 @@ body {
 
 	&-img {
 		position: relative;
+		overflow: hidden;
 
 		&-play {
 			--size: 180px;
@@ -1144,6 +1246,11 @@ body {
 			font-size: 60px;
 			color: #000;
 			z-index: 2;
+
+			@media(max-width: 1200px) {
+				--size: 100px;
+				font-size: 40px;
+			}
 		}
 	}
 
@@ -1158,6 +1265,11 @@ body {
 			font-size: 30px;
 			color: #000;
 			z-index: 2;
+
+			@media(max-width: $lg) {
+				--size: 40px;
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -1266,16 +1378,14 @@ body {
 .dialog-form {
 	display: flex;
 	flex-direction: column;
-	width: 360px;
+	width: 490px;
 	padding: 43px 50px;
 	background-color: #000;
 	border-radius: 25px;
 
 	@media(max-width: 360px) {
-		& {
-			width: 320px;
-			padding: 50px 18px;
-		}
+		width: 320px;
+		padding: 50px 18px;
 
 		&__title {
 			margin-bottom: 20px;
@@ -1326,6 +1436,19 @@ body {
 
 	&-info {
 		flex-grow: 2;
+
+		@media(max-width: 769px) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-inner {
+			@media(max-width: 769px) {
+				display: flex;
+				order: 10;
+				margin-top: 32px;
+			}
+		}
 	}
 
 	&-soc {
@@ -1335,13 +1458,18 @@ body {
 		margin-bottom: 90px;
 
 		@media(max-width: 769px) {
-			margin-top: 50px;
+			margin-top: 0;
 			margin-bottom: 50px;
+			margin-left: 20px;
 		}
 
 		&-item {
 			position: relative;
 			margin: 0 30px;
+
+			@media(max-width: 769px) {
+				margin: 0 18px;
+			}
 
 			&:before {
 				content: '';
@@ -1693,16 +1821,14 @@ body {
 	@media(max-width: $lg) {
 		display: flex;
 		flex-direction: column;
+		width: calc(100% + 20px);
+		margin: 0;
+		margin-left: -10px;
 		padding: 32px 16px 22px;
 		background: #1E1E1E;
 		border: none;
 		border-radius: 25px;
 
-	}
-
-	@media(max-width: $md) {
-		margin: 0;
-		border: none;
 	}
 
 	&__content {
@@ -2013,6 +2139,10 @@ body {
 			margin-top: auto;
 			margin-left: 30px;
 			background: #121212;
+
+			&+& {
+				margin-left: 16px;
+			}
 		}
 
 		&-content {
@@ -2105,8 +2235,8 @@ body {
 			margin-bottom: 128px;
 
 			@media(max-width:1240px) {
-				margin-bottom: 40px;
-				padding-bottom: 60px;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
 			}
 		}
 
@@ -2399,6 +2529,9 @@ body {
 }
 
 .running-line {
+
+	display: flex;
+	overflow: hidden;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: #FECC00;
@@ -2407,20 +2540,34 @@ body {
 	text-transform: uppercase;
 	pointer-events: none;
 
+
 	@media(max-width: $md) {
 		padding-top: 12px;
 		padding-bottom: 12px;
 		font-size: 12px;
+
 	}
 
-	.swiper-wrapper {
-		transition-timing-function: linear;
+	&-inner {
+		display: flex;
+		width: 100%;
+		min-width: 100%;
+		// width: max-content;
+		animation: running-line 5s linear infinite both;
 	}
 
 	&-item {
 		width: max-content;
+		margin-left: 36px;
 		padding-left: 36px;
 		border-left: 2px solid #000;
+		white-space: nowrap;
+	}
+}
+
+@keyframes running-line {
+	to {
+		transform: translateX(-100%);
 	}
 }
 
@@ -2428,4 +2575,29 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.scale-from-front {
+	animation: scaleFromFront 3s ease both;
+
+}
+
+@keyframes scaleFromFront {
+	from {
+		transform: scale(1.25);
+		filter: blur(5px);
+	}
+}
+
+.image-scale {
+	overflow: hidden;
+
+	@media(hover) {
+		&:hover img {
+			transform: scale(2);
+			transform-origin: calc(1% * var(--x-percent)) calc(1% * var(--y-percent));
+		}
+	}
+
+	img {}
 }
