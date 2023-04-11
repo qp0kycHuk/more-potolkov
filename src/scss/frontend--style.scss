@@ -2064,8 +2064,8 @@ body {
 
 			@media(max-width: 992px) {
 				position: absolute;
-				top: 15px;
 				right: 15px;
+				bottom: 15px;
 				width: 107px;
 				min-width: 0px;
 				height: 107px;
@@ -2261,7 +2261,7 @@ body {
 	--padding: 72px;
 	overflow: hidden;
 	margin-bottom: 48px;
-	padding: 84px var(--padding);
+	padding: 84px var(--padding) 68px;
 
 	@media(max-width: 769px) {
 		--padding: 20px;
@@ -2279,7 +2279,7 @@ body {
 
 	.running-line {
 		width: calc(100% + var(--padding) + var(--padding));
-		margin-bottom: 92px;
+		margin-bottom: 72px;
 		margin-left: calc(-1 * var(--padding));
 
 		@media(max-width:1240px) {
@@ -2297,7 +2297,7 @@ body {
 
 		&-wrapper {
 			position: relative;
-			margin-bottom: 128px;
+			margin-bottom: 72px;
 
 			@media(max-width:1240px) {
 				margin-bottom: 20px;
@@ -2431,8 +2431,13 @@ body {
 		overflow: hidden;
 		cursor: pointer;
 
+
 		@media(max-width:1540px) {
 			height: 600px;
+		}
+
+		@media(max-height:900px) {
+			height: 512px;
 		}
 
 		@media(max-width:1240px) {
@@ -2566,10 +2571,10 @@ body {
 
 .partners {
 	&-title {
-		margin-bottom: 116px;
+		margin-bottom: 48px;
 
 		@media(max-width:1240px) {
-			margin-bottom: 60px;
+			margin-bottom: 32px;
 		}
 	}
 
