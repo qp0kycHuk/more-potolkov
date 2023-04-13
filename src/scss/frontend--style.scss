@@ -587,14 +587,14 @@ body {
 		display: flex;
 		position: absolute;
 		right: 0;
-		bottom: 40px;
+		bottom: 0;
 		padding: 40px 40px 40px 80px;
 		background: rgba(217, 217, 217, 0.1);
 		backdrop-filter: blur(10px);
 		z-index: 2;
 
 		@media(max-width:1840px) {
-			bottom: 100px;
+			bottom: 0;
 		}
 
 		@media(max-width:1540px) {
