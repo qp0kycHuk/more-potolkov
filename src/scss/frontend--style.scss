@@ -443,6 +443,9 @@ body {
 			background: linear-gradient(90deg, #000, rgba(0, 0, 0, 0));
 			z-index: 1;
 		}
+		.swiper-wrapper{
+			height: 100%;
+		}
 	}
 
 	&-inner {
