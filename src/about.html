@@ -172,7 +172,7 @@
       <a href="javascript:;" class="started-soc-item btn btn--link link-hover">Ig</a>
     </div>
   </div>
-  
+
   <div class="started-news started-news--items">
     <a href="javascript:;" class="started-news-item started-news-item--border link-hover-wrapper">
       <div class="text-body-0 text--uppercase text--demibold mb-6 link-hover">УТП-1</div>
@@ -445,15 +445,16 @@
       </div>
     </div>
     <div class="quiz__block flex flex-align-stretch flex-justify-between">
-      <div class="quiz__packs flex flex-align-center flex-justify-between w-100">
-        <div class="quiz__pack quiz__pack--1 w-100">
-          <img src="/img/quiz-1.jpg" alt="">
+      <div class="quiz__packs flex flex-align-center flex-justify-between w-100 swiper">
+        <div class="swiper-wrapper">
+          <div class="quiz__pack quiz__pack--1 w-100 swiper-slide">
+            <img src="/img/quiz-1.jpg" alt="">
+          </div>
+          <div class="quiz__pack quiz__pack--2 w-100 swiper-slide">
+            <img src="/img/quiz-2.jpg" alt="">
+          </div>
         </div>
-        <div class="quiz__pack quiz__pack--2 w-100">
-          <img src="/img/quiz-2.jpg" alt="">
-        </div>
-        <!-- <img class="quiz__img mr-3 mr-lg-8" src="/img/quiz-1.jpg" alt="">
-                        <img class="quiz__img" src="/img/quiz-2.jpg" alt="">  -->
+
       </div>
       <div class="quiz__info flex flex-column flex-justify-center py-7">
         <div class="text-body-2 text-md-body-1 lh-1-5 mb-8">
@@ -466,6 +467,29 @@
         <div class="flex">
           <button type="button" class="quiz__info-btn btn btn--contur px-8" data-toggle-link>ЗАКАЗАТЬ</button>
         </div>
+      </div>
+      <div class="projects-slider-top">
+        <div class="projects-slider-pagination">
+          <div class="projects-slider-pagination-num">О1</div>
+          <div class="projects-slider-pagination-dots">
+            <div class="projects-slider-pagination-dot"></div>
+            <div class="projects-slider-pagination-dot"></div>
+            <div class="projects-slider-pagination-dot"></div>
+            <div class="projects-slider-pagination-dot"></div>
+          </div>
+          <div class="projects-slider-pagination-num">О4</div>
+        </div>
+
+        <button class="projects-slider-top-arrow projects-slider-top-prev btn btn--white -projects-slider-prev- ml-sm-2">
+          <svg class="icon">
+            <use xlink:href="/img/icons.svg#to-left" />
+          </svg>
+        </button>
+        <button class="projects-slider-top-arrow projects-slider-top-next  btn btn--white -projects-slider-next-">
+          <svg class="icon">
+            <use xlink:href="/img/icons.svg#to-right" />
+          </svg>
+        </button>
       </div>
     </div>
   </form>
@@ -615,7 +639,26 @@
                 </div>
             </form> -->
 </section>
-
+<script>
+  new Swiper('.quiz__packs', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      type: 'custom',
+      el: '.quiz__block .projects-slider-pagination',
+      renderCustom: (swiper, current, total) => {
+        console.log(current);
+        return `
+            <div class="projects-slider-pagination-num">${current < 10 ? '0' : ''}${current}</div>
+            <div class="projects-slider-pagination-dots">
+                <div class="projects-slider-pagination-dot ${current % 4 == 1 ? 'active' : ''}"></div>
+                <div class="projects-slider-pagination-dot ${current % 4 == 2 ? 'active' : ''}"></div>
+            </div>
+            <div class="projects-slider-pagination-num">${total < 10 ? '0' : ''}${total}</div>`;
+      }
+    },
+  })
+</script>
 <!-- <script>
     new Swiper('.about-qwiz-slider', {
         touchRatio: 0,

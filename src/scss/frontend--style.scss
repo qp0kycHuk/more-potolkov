@@ -1239,7 +1239,8 @@ body {
 		@media(max-width: $lg) {
 			margin-top: 50px;
 		}
-		@media(max-width: $md){
+
+		@media(max-width: $md) {
 			margin-top: 18px;
 		}
 	}
@@ -1401,11 +1402,12 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 490px;
+	max-width: 100%;
 	padding: 43px 50px;
 	background-color: #000;
 	border-radius: 25px;
 
-	@media(max-width: 360px) {
+	@media(max-width: 420px) {
 		width: 320px;
 		padding: 50px 18px;
 
@@ -1582,9 +1584,6 @@ body {
 		@media (max-width:$lg) {
 			padding: 0 20px;
 			padding-top: 40px;
-		}
-
-		@media (max-width:$md) {
 			padding-bottom: 40px;
 		}
 
@@ -2045,7 +2044,7 @@ body {
 		justify-content: center;
 		grid-gap: 30px;
 		width: auto;
-		gap: 30px;
+		margin: 0;
 
 		@media(max-width: $lg) {
 			width: 100%;
@@ -2054,13 +2053,24 @@ body {
 
 		@media(max-width: 992px) {
 			position: relative;
+			max-width: 500px;
+			margin-right: auto;
+			margin-bottom: 12px;
+			margin-left: auto;
 		}
 
-		@media(max-width: $md) {
-			grid-gap: 10px;
-			position: relative;
-			margin-bottom: 10px;
-			gap: 10px;
+		// @media(max-width: $md) {
+		// 	grid-gap: 10px;
+		// 	position: relative;
+		// 	margin-bottom: 10px;
+		// 	gap: 10px;
+		// }
+
+		.swiper-wrapper {
+			@media(min-width: 992px) {
+				transform: none !important;
+				gap: 30px;
+			}
 		}
 	}
 
@@ -2084,55 +2094,16 @@ body {
 
 		}
 
-		@media(max-width: 1200px) {
-			// height: 250px;
-
-		}
-
-		@media(max-width: $md) {
-			flex: 1;
+		@media(max-width: 992px) {
+			min-width: 0 !important;
 			height: auto !important;
+			max-height: none !important;
 		}
 
-		&--1 {
-			width: calc(100vw * 562 / 1920);
-			height: auto;
-
-			&:before {
-				content: '';
-				display: block;
-				width: 100%;
-				padding-bottom: calc(100% * 322 / 562);
-			}
-		}
-
-		&--2 {
-			width: calc(100vw * 332 / 1920);
-			height: auto;
-
-			@media(max-width: $lg) {
-				flex-grow: 1;
-				min-width: 372px;
-			}
-
-			@media(max-width: 992px) {
-				position: absolute;
-				right: 15px;
-				bottom: 15px;
-				width: 107px;
-				min-width: 0px;
-				height: 107px !important;
-				border: 1px solid #fff;
-			}
-
-
-			&:before {
-				content: '';
-				display: block;
-				width: 100%;
-				padding-bottom: calc(100% * 322 / 332);
-			}
-		}
+		// @media(max-width: $md) {
+		// 	flex: 1;
+		// 	height: auto !important;
+		// }
 
 		img {
 			position: absolute;
@@ -2140,6 +2111,70 @@ body {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		&--1 {
+			height: auto;
+
+			@media(min-width: 992px) {
+				width: calc(100vw * 562 / 1920) !important;
+
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				padding-bottom: calc(100% * 322 / 562);
+
+				@media(max-width: 992px) {
+					padding-bottom: calc(100% * 3 / 4);
+
+				}
+			}
+		}
+
+		&--2 {
+			height: auto;
+
+			@media(min-width: 992px) {
+				width: calc(100vw * 332 / 1920) !important;
+
+			}
+
+			@media(max-width: $lg) {
+				flex-grow: 1;
+				min-width: 372px;
+			}
+
+			@media(max-width: 992px) {
+				img {
+					object-fit: scale-down;
+				}
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				padding-bottom: calc(100% * 322 / 332);
+
+				@media(max-width: 992px) {
+					display: none;
+
+				}
+			}
+		}
+
+	}
+
+	&__block {
+		.projects-slider-top {
+			display: none;
+		}
+
+		.projects-slider-pagination-dot {
+			width: 58px;
 		}
 	}
 
@@ -2152,6 +2187,18 @@ body {
 			// max-width: 1100px;
 			margin: 0 auto;
 		}
+
+		@media(max-width: 992px) {
+			align-items: center;
+			flex-direction: column;
+			margin-bottom: 10px;
+
+			.projects-slider-top {
+				display: flex !important;
+				position: relative;
+			}
+		}
+
 	}
 
 	&__info {
@@ -2426,7 +2473,7 @@ body {
 				width: 100%;
 			}
 
-			@media(max-width: $sm) {
+			@media(max-width: 600px) {
 				justify-content: center;
 			}
 
@@ -2435,13 +2482,13 @@ body {
 			}
 
 			&-prev {
-				@media(max-width: $sm) {
+				@media(max-width: 600px) {
 					order: -10;
 				}
 			}
 
 			&-next {
-				@media(max-width: $sm) {
+				@media(max-width: 600px) {
 
 					// &:after,
 					&:before {
@@ -2468,9 +2515,9 @@ body {
 			display: flex;
 			align-items: flex-end;
 
-			@media(max-width: $sm) {
-				margin-right: 6px;
-				margin-left: 6px;
+			@media(max-width: 600px) {
+				margin-right: auto;
+				margin-left: auto;
 			}
 
 			&-dots {
