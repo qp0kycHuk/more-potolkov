@@ -57,7 +57,7 @@ body {
 
 .wrapper {
 	width: 100%;
-	overflow: hidden;
+	// overflow: hidden;
 	padding: 5px 50px 0;
 
 	@media (max-width:1400px) {
@@ -292,7 +292,7 @@ body {
 		display: none;
 		padding: 10px;
 
-		@media(max-width: 769px) {
+		@media(max-width: $lg)  {
 			display: block;
 		}
 	}
@@ -1445,7 +1445,7 @@ body {
 	padding: 72px 56px 48px;
 	border-radius: 25px 25px 0px 0px;
 
-	@media(max-width: 1500px) {
+	@media(max-width: $lg) {
 		flex-direction: column;
 		// align-items: center;
 		// justify-content: center;
@@ -1456,6 +1456,10 @@ body {
 		// margin-left: -20px;
 		padding: 20px;
 		padding-top: 60px;
+	}
+
+	&:before {
+		display: none;
 	}
 
 	&-info {
@@ -1509,8 +1513,8 @@ body {
 		flex-direction: column;
 		flex-grow: 4;
 
-		& .grid {
-			@media(max-width: 1500px) {
+		.grid {
+			@media(max-width: $lg) {
 				display: none;
 			}
 		}
@@ -1523,7 +1527,7 @@ body {
 		margin-top: auto;
 
 		@media(max-width: 1500px) {
-			margin-top: 40px;
+			margin-top: 90px;
 		}
 
 		&-links {
@@ -1541,6 +1545,10 @@ body {
 		right: 55px;
 		bottom: 48px;
 
+		@media(max-width: 1500px) {
+			bottom: 80px;
+		}
+
 		&-item {
 			--size: 74px;
 			justify-content: flex-start;
@@ -1554,9 +1562,10 @@ body {
 }
 
 .about {
-	overflow: hidden;
+	// overflow: hidden;
 	margin-bottom: 20px;
 	padding: 0;
+	padding-bottom: 1px;
 
 	@media (max-width:769px) {
 		// border-top: 1px solid #C8C8C8;
@@ -1573,8 +1582,11 @@ body {
 		flex-direction: column;
 		position: relative;
 		height: 588px;
+		overflow: hidden;
 		padding: 0 72px;
 		padding-top: 96px;
+		border-start-start-radius: inherit;
+		border-start-end-radius: inherit;
 
 		@media (max-width:1800px) {
 			height: auto;
@@ -2378,7 +2390,7 @@ body {
 
 .projects {
 	--padding: 72px;
-	overflow: hidden;
+	// overflow: hidden;
 	margin-bottom: 48px;
 	padding: 84px var(--padding) 68px;
 
@@ -2710,7 +2722,7 @@ body {
 	}
 
 	&-slider {
-		overflow: visible;
+		// overflow: visible;
 
 		.swiper-wrapper {
 			transition-timing-function: linear;
