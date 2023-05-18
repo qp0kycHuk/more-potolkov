@@ -292,7 +292,7 @@ body {
 		display: none;
 		padding: 10px;
 
-		@media(max-width: $lg)  {
+		@media(max-width: $lg) {
 			display: block;
 		}
 	}
@@ -381,42 +381,7 @@ body {
 
 	}
 
-	@media(max-width:$sm) {
-		padding-bottom: 20px;
 
-		.container {
-			width: 100%;
-			max-width: 100%;
-		}
-	}
-
-	@media(max-width: 1000px) {
-		&-soc {
-			top: 80%;
-		}
-	}
-
-	@media(max-width: 769px) {
-		// margin-right: -20px;
-		// margin-left: -20px;
-
-		&-title {}
-	}
-
-	@media(max-width: 576px) {
-		background-image: url('../img/started-bg-mob.png');
-
-		&-soc,
-		&-scroll {
-			display: none;
-		}
-
-		&-form {
-			&-input {
-				width: 100%;
-			}
-		}
-	}
 
 	&-background {
 		position: absolute;
@@ -826,6 +791,43 @@ body {
 		&-img {
 			display: block;
 			animation: hand 2s ease infinite;
+		}
+	}
+
+	@media(max-width:$sm) {
+		padding-bottom: 20px;
+
+		.container {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	@media(max-width: 1000px) {
+		&-soc {
+			top: 80%;
+		}
+	}
+
+	@media(max-width: 769px) {
+		// margin-right: -20px;
+		// margin-left: -20px;
+
+		&-title {}
+	}
+
+	@media(max-width: 576px) {
+		background-image: url('../img/started-bg-mob.png');
+
+		&-soc,
+		&-scroll {
+			display: none;
+		}
+
+		&-form {
+			&-input {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -1308,10 +1310,8 @@ body {
 	border-radius: 25px;
 
 	@media(max-width: 360px) {
-		& {
-			width: 320px;
-			padding: 50px 20px;
-		}
+		width: 320px;
+		padding: 50px 20px;
 	}
 
 	&__img {
@@ -1340,37 +1340,6 @@ body {
 	background-color: #000;
 	border-radius: 25px;
 
-	@media(max-width: 990px) {
-		& {
-			width: 425px;
-			padding: 60px 18px;
-		}
-
-		&__title {
-			margin-bottom: 20px;
-			margin-left: 18px;
-			font-size: 20px;
-
-			& br {
-				display: none;
-			}
-		}
-
-		&__text {
-			font-size: 14px;
-			line-height: 20px;
-		}
-	}
-
-	@media(max-width: 425px) {
-		& {
-			width: 320px;
-		}
-
-		&__title {
-			font-size: 16px;
-		}
-	}
 
 	&__title {
 		position: relative;
@@ -1396,6 +1365,34 @@ body {
 		font-weight: 400;
 		line-height: 24px;
 	}
+
+	@media(max-width: 990px) {
+		width: 425px;
+		padding: 60px 18px;
+
+		&__title {
+			margin-bottom: 20px;
+			margin-left: 18px;
+			font-size: 20px;
+
+			& br {
+				display: none;
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+
+	@media(max-width: 425px) {
+		width: 320px;
+
+		&__title {
+			font-size: 16px;
+		}
+	}
 }
 
 .dialog-form {
@@ -1407,14 +1404,6 @@ body {
 	background-color: #000;
 	border-radius: 25px;
 
-	@media(max-width: 420px) {
-		width: 320px;
-		padding: 50px 18px;
-
-		&__title {
-			margin-bottom: 20px;
-		}
-	}
 
 	&__title {
 		position: relative;
@@ -1437,6 +1426,15 @@ body {
 
 	&__btn {
 		background: #1E1E1E;
+	}
+
+	@media(max-width: 420px) {
+		width: 320px;
+		padding: 50px 18px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
 	}
 }
 
